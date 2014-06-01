@@ -1,0 +1,884 @@
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/ruby\/lib\/ruby\/gems\/1\.9\.1\/gems\/compass-core-1\.0\.0\.alpha\.19\/stylesheets\/compass\/reset\/_utilities-legacy\.scss}line{font-family:\000037}}
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-weight: inherit;
+  font-style: inherit;
+  font-size: 100%;
+  font-family: inherit;
+  vertical-align: baseline;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/ruby\/lib\/ruby\/gems\/1\.9\.1\/gems\/compass-core-1\.0\.0\.alpha\.19\/stylesheets\/compass\/reset\/_utilities-legacy\.scss}line{font-family:\0000317}}
+body {
+  line-height: 1;
+  color: black;
+  background: white;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/ruby\/lib\/ruby\/gems\/1\.9\.1\/gems\/compass-core-1\.0\.0\.alpha\.19\/stylesheets\/compass\/reset\/_utilities-legacy\.scss}line{font-family:\0000319}}
+ol, ul {
+  list-style: none;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/ruby\/lib\/ruby\/gems\/1\.9\.1\/gems\/compass-core-1\.0\.0\.alpha\.19\/stylesheets\/compass\/reset\/_utilities-legacy\.scss}line{font-family:\0000321}}
+table {
+  border-collapse: separate;
+  border-spacing: 0;
+  vertical-align: middle;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/ruby\/lib\/ruby\/gems\/1\.9\.1\/gems\/compass-core-1\.0\.0\.alpha\.19\/stylesheets\/compass\/reset\/_utilities-legacy\.scss}line{font-family:\0000323}}
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/ruby\/lib\/ruby\/gems\/1\.9\.1\/gems\/compass-core-1\.0\.0\.alpha\.19\/stylesheets\/compass\/reset\/_utilities-legacy\.scss}line{font-family:\0000325}}
+q, blockquote {
+  quotes: "" "";
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/ruby\/lib\/ruby\/gems\/1\.9\.1\/gems\/compass-core-1\.0\.0\.alpha\.19\/stylesheets\/compass\/reset\/_utilities-legacy\.scss}line{font-family:\0000396}}
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/ruby\/lib\/ruby\/gems\/1\.9\.1\/gems\/compass-core-1\.0\.0\.alpha\.19\/stylesheets\/compass\/reset\/_utilities-legacy\.scss}line{font-family:\0000327}}
+a img {
+  border: none;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/ruby\/lib\/ruby\/gems\/1\.9\.1\/gems\/compass-core-1\.0\.0\.alpha\.19\/stylesheets\/compass\/typography\/_vertical_rhythm\.scss}line{font-family:\00003106}}
+html {
+  font-size: 100%;
+  line-height: 1.5em;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/openserver\/domains\/parallels\.loc\/scss\/_typography\.scss}line{font-family:\0000319}}
+h1 {
+  font-size: 3.157rem;
+  line-height: 4.5rem;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/openserver\/domains\/parallels\.loc\/scss\/_typography\.scss}line{font-family:\0000320}}
+h2 {
+  font-size: 2.369rem;
+  line-height: 3rem;
+  margin-bottom: 1.5rem;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/openserver\/domains\/parallels\.loc\/scss\/_typography\.scss}line{font-family:\0000324}}
+h3 {
+  font-size: 1.777rem;
+  line-height: 3rem;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/openserver\/domains\/parallels\.loc\/scss\/_typography\.scss}line{font-family:\0000325}}
+h4 {
+  font-size: 1.333rem;
+  line-height: 1.5rem;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/openserver\/domains\/parallels\.loc\/scss\/_typography\.scss}line{font-family:\0000326}}
+h5 {
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/openserver\/domains\/parallels\.loc\/scss\/_typography\.scss}line{font-family:\0000327}}
+h6 {
+  font-size: 0.75rem;
+  line-height: 1.5rem;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/openserver\/domains\/parallels\.loc\/scss\/_typography\.scss}line{font-family:\0000331}}
+p {
+  font-size: 0.8125rem;
+  line-height: 1.5rem;
+  word-break: break-all;
+  word-break: break-word;
+  -moz-hyphens: auto;
+  -ms-hyphens: auto;
+  -webkit-hyphens: auto;
+  hyphens: auto;
+  margin-bottom: 1.5rem;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/openserver\/domains\/parallels\.loc\/scss\/_grid\.scss}line{font-family:\0000316}}
+.container {
+  width: 60rem;
+  margin-left: auto;
+  margin-right: auto;
+  *zoom: 1;
+  height: 100%;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/ruby\/lib\/ruby\/gems\/1\.9\.1\/gems\/susy-2\.1\.2\/sass\/susy\/output\/support\/_clearfix\.scss}line{font-family:\0000312}}
+.container:after {
+  content: " ";
+  display: block;
+  clear: both;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/ruby\/lib\/ruby\/gems\/1\.9\.1\/gems\/compass-core-1\.0\.0\.alpha\.19\/stylesheets\/compass\/utilities\/general\/_clearfix\.scss}line{font-family:\0000338}}
+.container:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/openserver\/domains\/parallels\.loc\/scss\/_buttons\.scss}line{font-family:\000031}}
+.button {
+  font-size: 1.125rem;
+  font-weight: 300;
+  text-decoration: none;
+  text-align: center;
+  line-height: 42px;
+  height: 42px;
+  padding: 0 2em;
+  color: #FFFFFF;
+  border: none;
+  border-radius: 5px;
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+  z-index: 2;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/openserver\/domains\/parallels\.loc\/scss\/_buttons\.scss}line{font-family:\0000317}}
+.button_green {
+  background: #b0cd3b;
+  box-shadow: 0 4px #798f21;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/openserver\/domains\/parallels\.loc\/scss\/_buttons\.scss}line{font-family:\0000321}}
+.button_aqua {
+  background: #1bbc9d;
+  box-shadow: 0 4px #1f937d;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/openserver\/domains\/parallels\.loc\/scss\/_buttons\.scss}line{font-family:\0000325}}
+.button:active {
+  box-shadow: none;
+  bottom: -4px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/openserver\/domains\/parallels\.loc\/scss\/_buttons\.scss}line{font-family:\0000329}}
+.button:focus {
+  outline: none;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/openserver\/domains\/parallels\.loc\/scss\/style\.scss}line{font-family:\0000348}}
+* {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/openserver\/domains\/parallels\.loc\/scss\/style\.scss}line{font-family:\0000351}}
+body {
+  font-family: "Roboto", sans-serif;
+  -webkit-transition: translste(0);
+  transition: translste(0);
+  -webkit-font-smoothing: antialiased !important;
+  -webkit-backface-visibility: hidden;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/openserver\/domains\/parallels\.loc\/scss\/style\.scss}line{font-family:\0000360}}
+.headline h2, .slider h2 {
+  font-size: 3.75rem;
+  font-weight: 300;
+  color: white;
+  text-shadow: 0 0 1px rgba(0, 0, 0, 0.05), 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/openserver\/domains\/parallels\.loc\/scss\/style\.scss}line{font-family:\0000366}}
+.headline h3, .slider h3 {
+  font-size: 2.5rem;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.8);
+  text-shadow: 0 0 1px rgba(0, 0, 0, 0.05), 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/openserver\/domains\/parallels\.loc\/scss\/style\.scss}line{font-family:\0000372}}
+.article h2 {
+  font-size: 2.25rem;
+  font-weight: 300;
+  color: #515151;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/openserver\/domains\/parallels\.loc\/scss\/style\.scss}line{font-family:\0000377}}
+.services h3 {
+  font-size: 1.5rem;
+  font-weight: 300;
+  color: #3a3a3a;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/openserver\/domains\/parallels\.loc\/scss\/style\.scss}line{font-family:\0000382}}
+.services p {
+  font-size: 0.8125rem;
+  font-weight: 300;
+  color: #5f5f5f;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/openserver\/domains\/parallels\.loc\/scss\/style\.scss}line{font-family:\0000388}}
+.disable-hover,
+.disable-hover * {
+  pointer-events: none !important;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/openserver\/domains\/parallels\.loc\/scss\/style\.scss}line{font-family:\0000396}}
+.article {
+  overflow: hidden;
+  *zoom: 1;
+  padding: 1.5rem 0;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/openserver\/domains\/parallels\.loc\/scss\/style\.scss}line{font-family:\0000399}}
+.article h2 {
+  margin-bottom: 3rem;
+  text-align: center;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/openserver\/domains\/parallels\.loc\/scss\/style\.scss}line{font-family:\00003104}}
+.article_contacts {
+  background: #F2F2F2;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/openserver\/domains\/parallels\.loc\/scss\/style\.scss}line{font-family:\00003108}}
+.headline {
+  overflow: hidden;
+  *zoom: 1;
+  height: 27rem;
+  /* 27*15 = 432px */
+  position: relative;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/openserver\/domains\/parallels\.loc\/scss\/style\.scss}line{font-family:\00003112}}
+.headline h2 {
+  margin-top: 9rem;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/openserver\/domains\/parallels\.loc\/scss\/style\.scss}line{font-family:\00003116}}
+.headline h3 {
+  margin-bottom: 1.5rem;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/openserver\/domains\/parallels\.loc\/scss\/style\.scss}line{font-family:\00003135}}
+.headline_purchase {
+  background-image: url(http://eatapapaya.com/Fore/images/evergreen.jpg);
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/openserver\/domains\/parallels\.loc\/scss\/style\.scss}line{font-family:\00003138}}
+.headline_pricing {
+  background-image: url(http://eatapapaya.com/Fore/images/evergreen.jpg);
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/openserver\/domains\/parallels\.loc\/scss\/style\.scss}line{font-family:\00003141}}
+.headline_about {
+  background-image: url(http://eatapapaya.com/Fore/images/evergreen.jpg);
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/openserver\/domains\/parallels\.loc\/scss\/style\.scss}line{font-family:\00003144}}
+.headline_social {
+  background-image: url(http://eatapapaya.com/Fore/images/evergreen.jpg);
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/openserver\/domains\/parallels\.loc\/scss\/_header\.scss}line{font-family:\000031}}
+.header {
+  height: 7.5rem;
+  width: 100%;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  z-index: 9999;
+  background: rgba(255, 255, 255, 0.9);
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/openserver\/domains\/parallels\.loc\/scss\/_header\.scss}line{font-family:\0000310}}
+.header nav {
+  float: right;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/openserver\/domains\/parallels\.loc\/scss\/_header\.scss}line{font-family:\0000312}}
+.header nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/openserver\/domains\/parallels\.loc\/scss\/_header\.scss}line{font-family:\0000316}}
+.header nav ul li {
+  float: left;
+  margin-right: 40px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/openserver\/domains\/parallels\.loc\/scss\/_header\.scss}line{font-family:\0000319}}
+.header nav ul li a {
+  text-decoration: none;
+  line-height: 7.5rem;
+  color: #595959;
+  -webkit-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/openserver\/domains\/parallels\.loc\/scss\/_header\.scss}line{font-family:\0000326}}
+.header nav ul li a:hover {
+  color: #b0cd3b;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/openserver\/domains\/parallels\.loc\/scss\/_header\.scss}line{font-family:\0000334}}
+.logo {
+  width: 8.75rem;
+  float: left;
+  margin-left: 0.625rem;
+  margin-right: 0.625rem;
+  font-size: 1.5em;
+  line-height: 7.5rem;
+  text-decoration: none;
+  color: #595959;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/openserver\/domains\/parallels\.loc\/scss\/_header\.scss}line{font-family:\0000340}}
+.logo img {
+  margin-right: .5em;
+  vertical-align: middle;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/openserver\/domains\/parallels\.loc\/scss\/_slider\.scss}line{font-family:\000031}}
+.slider {
+  position: relative;
+  z-index: 1;
+  /* webkit blinking fix */
+  width: 100%;
+  height: 100%;
+  /*height: 590px;*/
+  overflow: hidden;
+  margin-top: 7.5rem;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/openserver\/domains\/parallels\.loc\/scss\/_slider\.scss}line{font-family:\000039}}
+.slider ul {
+  overflow: hidden;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  list-style: none;
+  height: 100%;
+  /* Clear fix */
+  *zoom: 1;
+  /**
+   * Prevent blinking issue
+   * Not tested. Experimental.
+   */
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/openserver\/domains\/parallels\.loc\/scss\/_slider\.scss}line{font-family:\0000328}}
+.slider li {
+  overflow: hidden;
+  display: block;
+  position: relative;
+  float: left;
+  height: 100%;
+  padding: 15em 0;
+  float: left;
+  clear: none;
+  -webkit-background-size: cover;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/openserver\/domains\/parallels\.loc\/scss\/_slider\.scss}line{font-family:\0000343}}
+.slider .slide1 {
+  background-image: url(/images/slide1.jpg);
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/openserver\/domains\/parallels\.loc\/scss\/_slider\.scss}line{font-family:\0000346}}
+.slider .slide2 {
+  background-image: url(http://eatapapaya.com/Fore/images/slide2.jpg);
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/openserver\/domains\/parallels\.loc\/scss\/_slider\.scss}line{font-family:\0000349}}
+.slider .slide3 {
+  background-image: url(http://eatapapaya.com/Fore/images/slide3.jpg);
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/openserver\/domains\/parallels\.loc\/scss\/_slider\.scss}line{font-family:\0000352}}
+.slider .slide4 {
+  background-image: url(http://eatapapaya.com/Fore/images/slide4.jpg);
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/openserver\/domains\/parallels\.loc\/scss\/_slider\.scss}line{font-family:\0000356}}
+.slider-arrow {
+  position: absolute;
+  display: block;
+  margin-bottom: -14px;
+  font-size: 40px;
+  /* old 28px */
+  color: rgba(255, 255, 255, 0.8);
+  transition: all .2s ease-in-out;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/openserver\/domains\/parallels\.loc\/scss\/_slider\.scss}line{font-family:\0000363}}
+.slider-arrow:hover {
+  color: white;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/openserver\/domains\/parallels\.loc\/scss\/_slider\.scss}line{font-family:\0000366}}
+.slider-arrow--right {
+  bottom: 50%;
+  right: 30px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/openserver\/domains\/parallels\.loc\/scss\/_slider\.scss}line{font-family:\0000370}}
+.slider-arrow--left {
+  bottom: 50%;
+  left: 30px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/openserver\/domains\/parallels\.loc\/scss\/_slider\.scss}line{font-family:\0000376}}
+.slider-nav {
+  position: absolute;
+  bottom: 30px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/openserver\/domains\/parallels\.loc\/scss\/_slider\.scss}line{font-family:\0000379}}
+.slider-nav__item {
+  width: 12px;
+  height: 12px;
+  float: left;
+  clear: none;
+  display: block;
+  margin: 0 5px;
+  background: #fff;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/openserver\/domains\/parallels\.loc\/scss\/_slider\.scss}line{font-family:\0000387}}
+.slider-nav__item:hover {
+  background: #ccc;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/openserver\/domains\/parallels\.loc\/scss\/_slider\.scss}line{font-family:\0000390}}
+.slider-nav__item--current {
+  background: #ccc;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/openserver\/domains\/parallels\.loc\/scss\/_slider\.scss}line{font-family:\0000396}}
+.slider h2 {
+  opacity: 0;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/openserver\/domains\/parallels\.loc\/scss\/_slider\.scss}line{font-family:\00003100}}
+.slider h3 {
+  opacity: 0;
+  -webkit-animation-delay: .2s;
+  animation-delay: .2s;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/openserver\/domains\/parallels\.loc\/scss\/_services\.scss}line{font-family:\000039}}
+.services__item {
+  width: 13.75rem;
+  float: left;
+  margin-left: 0.625rem;
+  margin-right: 0.625rem;
+  text-align: center;
+  -webkit-animation-duration: 3s;
+  animation-duration: 3s;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/openserver\/domains\/parallels\.loc\/scss\/_services\.scss}line{font-family:\0000316}}
+.services__item:nth-of-type(1) .services__icon {
+  background: #f0f0f0 url(/images/browser.png) no-repeat center;
+  -webkit-animation-delay: 2s;
+  animation-delay: 2s;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/openserver\/domains\/parallels\.loc\/scss\/_services\.scss}line{font-family:\0000321}}
+.services__item:nth-of-type(2) .services__icon {
+  background: #f0f0f0 url(/images/pocket.png) no-repeat center;
+  -webkit-animation-delay: 3s;
+  animation-delay: 3s;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/openserver\/domains\/parallels\.loc\/scss\/_services\.scss}line{font-family:\0000326}}
+.services__item:nth-of-type(3) .services__icon {
+  background: #f0f0f0 url(/images/camera.png) no-repeat center;
+  -webkit-animation-delay: 4s;
+  animation-delay: 4s;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/openserver\/domains\/parallels\.loc\/scss\/_services\.scss}line{font-family:\0000331}}
+.services__item:nth-of-type(4) .services__icon {
+  background: #f0f0f0 url(/images/trash.png) no-repeat center;
+  -webkit-animation-delay: 5s;
+  animation-delay: 5s;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/openserver\/domains\/parallels\.loc\/scss\/_services\.scss}line{font-family:\0000337}}
+.services__icon {
+  width: 6rem;
+  height: 6rem;
+  border-radius: 50%;
+  display: block;
+  margin: 0 auto;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/openserver\/domains\/parallels\.loc\/scss\/_portfolio\.scss}line{font-family:\000031}}
+.filter {
+  text-align: center;
+  margin-bottom: 3rem;
+  font-size: 0.8125rem;
+  line-height: 3rem;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/openserver\/domains\/parallels\.loc\/scss\/_portfolio\.scss}line{font-family:\000036}}
+.filter a {
+  text-align: center;
+  text-decoration: none;
+  color: #515151;
+  display: inline-block;
+  height: 30px;
+  line-height: 30px;
+  font-weight: 300;
+  padding: 0 1rem;
+  margin-right: .25rem;
+  background: #ececec;
+  transition: all .2s ease-in-out;
+  border-bottom: 2px solid rgba(255, 255, 255, 0);
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/openserver\/domains\/parallels\.loc\/scss\/_portfolio\.scss}line{font-family:\0000320}}
+.filter a:hover, .filter a.selected {
+  background: #1bbc9d;
+  color: #FFFFFF;
+  border-bottom: 2px solid #1f937d;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/openserver\/domains\/parallels\.loc\/scss\/_portfolio\.scss}line{font-family:\0000327}}
+.portfolio {
+  overflow: hidden;
+  z-index: 1;
+  /* webkit fix */
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/openserver\/domains\/parallels\.loc\/scss\/_portfolio\.scss}line{font-family:\0000331}}
+.portfolio__thumbnail {
+  width: 13.75rem;
+  float: left;
+  margin-left: 0.625rem;
+  margin-right: 0.625rem;
+  height: 220px;
+  background: #ccc;
+  position: relative;
+  cursor: pointer;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/openserver\/domains\/parallels\.loc\/scss\/_portfolio\.scss}line{font-family:\0000340}}
+.portfolio__thumbnail figcaption {
+  position: absolute;
+  padding: 10px;
+  text-align: center;
+  top: 50%;
+  left: 50%;
+  width: 174px;
+  height: 174px;
+  background: rgba(0, 0, 0, 0.9);
+  color: #FFF;
+  margin: -87px 0 0 -87px;
+  display: none;
+  transition: all .3s ease-in-out;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/openserver\/domains\/parallels\.loc\/scss\/_portfolio\.scss}line{font-family:\0000353}}
+.portfolio__thumbnail figcaption h3 {
+  font-size: 1.25rem;
+  font-weight: 400;
+  margin: 0 0 1rem 0;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/openserver\/domains\/parallels\.loc\/scss\/_portfolio\.scss}line{font-family:\0000358}}
+.portfolio__thumbnail figcaption span {
+  margin-right: 15px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/openserver\/domains\/parallels\.loc\/scss\/_portfolio\.scss}line{font-family:\0000360}}
+.portfolio__thumbnail figcaption span i {
+  margin-right: 10px;
+  font-size: 1.25rem;
+  vertical-align: middle;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/openserver\/domains\/parallels\.loc\/scss\/_portfolio\.scss}line{font-family:\0000366}}
+.portfolio__thumbnail figcaption .tag {
+  font-size: 0.875rem;
+  font-weight: 300;
+  margin: 0 0 1rem 0;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/openserver\/domains\/parallels\.loc\/scss\/_portfolio\.scss}line{font-family:\0000373}}
+.portfolio__thumbnail:hover figcaption {
+  display: block;
+  -moz-animation-duration: .5s;
+  -webkit-animation-duration: .5s;
+  animation-duration: .5s;
+  -webkit-animation-delay: 0s;
+  animation-delay: 0s;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/openserver\/domains\/parallels\.loc\/scss\/style\.scss}line{font-family:\00003170}}
+.price-table {
+  width: 18.75rem;
+  float: left;
+  margin-left: 0.625rem;
+  margin-right: 0.625rem;
+  margin-bottom: 3rem;
+  text-align: center;
+  background: #f4f4f4;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  -moz-box-shadow: 0 2px #eeeeee;
+  -webkit-box-shadow: 0 2px #eeeeee;
+  box-shadow: 0 2px #eeeeee;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/openserver\/domains\/parallels\.loc\/scss\/style\.scss}line{font-family:\00003172}}
+.price-table:nth-of-type(4), .price-table:nth-of-type(5), .price-table:nth-of-type(6), .price-table:nth-of-type(7) {
+  width: 13.75rem;
+  float: left;
+  margin-left: 0.625rem;
+  margin-right: 0.625rem;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/openserver\/domains\/parallels\.loc\/scss\/style\.scss}line{font-family:\00003187}}
+.price-table__title {
+  font-size: 1.25rem;
+  line-height: 4.5rem;
+  font-weight: 300;
+  color: #5c5c5c;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/openserver\/domains\/parallels\.loc\/scss\/style\.scss}line{font-family:\00003192}}
+.price-table__tarrif {
+  background: #1bbc9d;
+  border-bottom: 3px solid #17987f;
+  height: 3rem;
+  margin-bottom: 1.5rem;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/openserver\/domains\/parallels\.loc\/scss\/style\.scss}line{font-family:\00003197}}
+.price-table__tarrif p {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #FFF;
+  line-height: 3rem;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/openserver\/domains\/parallels\.loc\/scss\/style\.scss}line{font-family:\00003204}}
+.price-table__details {
+  margin-bottom: 1.5rem;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/openserver\/domains\/parallels\.loc\/scss\/style\.scss}line{font-family:\00003206}}
+.price-table__details li {
+  font-size: 1rem;
+  line-height: 3rem;
+  color: #969696;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/openserver\/domains\/parallels\.loc\/scss\/style\.scss}line{font-family:\00003209}}
+.price-table__details li strong {
+  color: #5c5c5c;
+  font-weight: bold;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/openserver\/domains\/parallels\.loc\/scss\/style\.scss}line{font-family:\00003216}}
+.price-table__purchase {
+  height: 4.5rem;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/openserver\/domains\/parallels\.loc\/scss\/style\.scss}line{font-family:\00003226}}
+.team__item {
+  width: 13.75rem;
+  float: left;
+  margin-left: 0.625rem;
+  margin-right: 0.625rem;
+  text-align: center;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/openserver\/domains\/parallels\.loc\/scss\/style\.scss}line{font-family:\00003229}}
+.team__item h3 {
+  font-size: 1.25rem;
+  line-height: 1.5rem;
+  color: #2e2e2e;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/openserver\/domains\/parallels\.loc\/scss\/style\.scss}line{font-family:\00003233}}
+.team__item h4 {
+  font-size: 1rem;
+  color: #515151;
+  margin-bottom: 1.5rem;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/openserver\/domains\/parallels\.loc\/scss\/style\.scss}line{font-family:\00003238}}
+.team__item p {
+  color: #818181;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/openserver\/domains\/parallels\.loc\/scss\/style\.scss}line{font-family:\00003242}}
+.team__photo {
+  width: 220px;
+  height: 220px;
+  background: #DDD;
+  margin-bottom: 1.5rem;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/openserver\/domains\/parallels\.loc\/scss\/style\.scss}line{font-family:\00003252}}
+.mail {
+  width: 38.75rem;
+  float: left;
+  margin-left: 0.625rem;
+  margin-right: 0.625rem;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/openserver\/domains\/parallels\.loc\/scss\/style\.scss}line{font-family:\00003254}}
+.mail__title {
+  font-size: 1.125rem;
+  line-height: 3rem;
+  color: #404040;
+  font-weight: bold;
+  height: 3rem;
+  line-height: 3rem;
+  border-bottom: 2px solid #DDD;
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/openserver\/domains\/parallels\.loc\/scss\/style\.scss}line{font-family:\00003265}}
+.mail__input {
+  margin-bottom: 1.5rem;
+  font-size: 0.875rem;
+  width: 300px;
+  height: 3rem;
+  padding: 0 10px;
+  float: left;
+  background: #FFF;
+  border: none;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/openserver\/domains\/parallels\.loc\/scss\/style\.scss}line{font-family:\00003274}}
+.mail__input:nth-child(1) {
+  margin-right: 10px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/openserver\/domains\/parallels\.loc\/scss\/style\.scss}line{font-family:\00003277}}
+.mail__input:nth-child(2) {
+  margin-left: 10px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/openserver\/domains\/parallels\.loc\/scss\/style\.scss}line{font-family:\00003281}}
+.mail__textarea {
+  width: 620.0px;
+  height: 12rem;
+  font-family: "Roboto", sans-serif;
+  padding: 10px;
+  font-size: 0.875rem;
+  background: #FFF;
+  border: none;
+  resize: none;
+  overflow-y: auto;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/openserver\/domains\/parallels\.loc\/scss\/style\.scss}line{font-family:\00003292}}
+.mail__submit {
+  height: 34px;
+  line-height: 34px;
+  width: 140px;
+  color: #FFF;
+  font-weight: 500;
+  background: #1bbc9d;
+  transition: all .2s ease-in-out;
+  border: none;
+  border-bottom: 2px solid #1f937d;
+  cursor: pointer;
+  margin-top: 1.5rem;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/openserver\/domains\/parallels\.loc\/scss\/style\.scss}line{font-family:\00003305}}
+.mail__submit:hover {
+  background: #1bbc9d;
+  color: #FFFFFF;
+  border-bottom: 2px solid #1f937d;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/openserver\/domains\/parallels\.loc\/scss\/style\.scss}line{font-family:\00003312}}
+.more {
+  width: 18.75rem;
+  float: left;
+  margin-left: 0.625rem;
+  margin-right: 0.625rem;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/openserver\/domains\/parallels\.loc\/scss\/style\.scss}line{font-family:\00003315}}
+.more__title {
+  color: #404040;
+  font-size: 1.125rem;
+  font-weight: bold;
+  height: 3rem;
+  line-height: 3rem;
+  border-bottom: 2px solid #DDD;
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/openserver\/domains\/parallels\.loc\/scss\/style\.scss}line{font-family:\00003327}}
+.more ul + ul {
+  margin-top: 3rem;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/openserver\/domains\/parallels\.loc\/scss\/style\.scss}line{font-family:\00003331}}
+.more li {
+  color: #5c5c5c;
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/openserver\/domains\/parallels\.loc\/scss\/_social\.scss}line{font-family:\000033}}
+.social__icon {
+  display: block;
+  height: 46px;
+  width: 46px;
+  font-size: 1.25rem;
+  text-align: center;
+  line-height: 46px;
+  color: #333;
+  float: left;
+  margin-right: 30px;
+  border-radius: 23px;
+  border: 5px solid rgba(255, 255, 255, 0);
+  background: #fff;
+  transition: all .3s ease-in-out;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/openserver\/domains\/parallels\.loc\/scss\/_social\.scss}line{font-family:\0000317}}
+.social__icon:hover {
+  border: 5px solid #FFF;
+  background: #b0cd3b;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/openserver\/domains\/parallels\.loc\/scss\/_widgets\.scss}line{font-family:\000031}}
+.widget {
+  width: 18.75rem;
+  float: left;
+  margin-left: 0.625rem;
+  margin-right: 0.625rem;
+  color: #747474;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/openserver\/domains\/parallels\.loc\/scss\/_widgets\.scss}line{font-family:\000034}}
+.widget__title {
+  color: #404040;
+  font-size: 1.125rem;
+  font-weight: bold;
+  height: 3rem;
+  line-height: 3rem;
+  border-bottom: 2px solid #DDD;
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/openserver\/domains\/parallels\.loc\/scss\/_widgets\.scss}line{font-family:\0000315}}
+.widget__item h4 {
+  font-size: 0.8125rem;
+  font-weight: bold;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/openserver\/domains\/parallels\.loc\/scss\/_widgets\.scss}line{font-family:\0000320}}
+.widget .fa-twitter {
+  color: #b0cd3b;
+  font-size: 1rem;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/openserver\/domains\/parallels\.loc\/scss\/_footer\.scss}line{font-family:\000031}}
+.footer {
+  height: 7.5rem;
+  background-color: #f2f2f2;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/openserver\/domains\/parallels\.loc\/scss\/_footer\.scss}line{font-family:\000035}}
+.footer ul {
+  width: 38.75rem;
+  float: right;
+  margin-left: 0.625rem;
+  margin-right: 0.625rem;
+  list-style: none;
+  padding: 0;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/openserver\/domains\/parallels\.loc\/scss\/_footer\.scss}line{font-family:\000039}}
+.footer ul li {
+  float: right;
+  margin-left: 40px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/openserver\/domains\/parallels\.loc\/scss\/_footer\.scss}line{font-family:\0000312}}
+.footer ul li:first-child {
+  margin-right: 0;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/openserver\/domains\/parallels\.loc\/scss\/_footer\.scss}line{font-family:\0000315}}
+.footer ul li a {
+  text-decoration: none;
+  line-height: 7.5rem;
+  color: #5c5c5c;
+  -webkit-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/openserver\/domains\/parallels\.loc\/scss\/_footer\.scss}line{font-family:\0000322}}
+.footer ul li a:hover {
+  color: #b0cd3b;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/openserver\/domains\/parallels\.loc\/scss\/_footer\.scss}line{font-family:\0000325}}
+.footer ul li a span {
+  font-weight: 300;
+}
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,83 @@
+.filter {
+	text-align: center;
+	margin-bottom: 3rem;
+	@include adjust-font-size-to(0.8125rem, 2);
+
+	a {
+		text-align: center;
+		text-decoration: none;
+		color: #515151;
+		display: inline-block;
+		height: 30px;
+		line-height: 30px;
+		font-weight: 300;
+		padding: 0 1rem;
+		margin-right: .25rem;
+		background: #ececec;
+		transition: all .2s ease-in-out;
+		border-bottom: 2px solid rgba(255,255,255, .0);
+
+		&:hover, &.selected {
+			background: #1bbc9d;
+			color: #FFFFFF;
+			border-bottom: 2px solid #1f937d;
+		}
+	}
+}
+.portfolio {
+	overflow: hidden;
+	z-index: 1; /* webkit fix */
+
+	&__thumbnail {
+		@include span(3);
+		height: 220px;
+		background: #ccc;
+		position: relative;
+		cursor: pointer;
+		margin-bottom: 10px;
+		margin-top: 10px;
+
+		figcaption {
+			position: absolute;
+			padding: 10px;
+			text-align: center;
+			top: 50%;
+			left: 50%;
+			width: 174px;
+			height: 174px;
+			background: rgba(0,0,0, 0.9);
+			color: #FFF;
+			margin: -87px 0 0 -87px;
+			display: none;
+			transition: all .3s ease-in-out;
+			h3 {
+				font-size: 1.25rem;
+				font-weight: 400;
+				margin: 0 0 1rem 0;
+			}
+			span {
+				margin-right: 15px;
+				i {
+					margin-right: 10px;
+					font-size: 1.25rem;
+					vertical-align: middle;
+				}
+			}
+			.tag {
+				font-size: 0.875rem;
+				font-weight: 300;
+				margin: 0 0 1rem 0;
+			}
+		}
+
+		&:hover figcaption {
+			display: block;
+			-moz-animation-duration: .5s;
+			-webkit-animation-duration: .5s;
+			animation-duration: .5s;
+			-webkit-animation-delay: 0s;
+			animation-delay: 0s;
+		}
+
+	}
+}

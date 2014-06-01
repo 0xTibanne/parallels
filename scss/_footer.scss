@@ -1,0 +1,31 @@
+.footer {
+	height: $footer-height;
+	background-color: #f2f2f2;
+
+	ul {
+		@include span(8 last);
+		list-style: none;
+		padding: 0;
+		li {
+			float: right;
+			margin-left: 40px;
+			&:first-child {
+				margin-right: 0;
+			}
+			a {
+				text-decoration: none;
+				line-height: $footer-height;
+				color: $footer-color;
+				-webkit-transition: all .4s ease-in-out;
+				transition: all .4s ease-in-out;
+
+				&:hover {
+					color: $link-hover;
+				}
+				span {
+					font-weight: 300;
+				}
+			}
+		}
+	}
+}

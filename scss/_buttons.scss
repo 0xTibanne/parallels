@@ -1,0 +1,32 @@
+.button {
+	font-size: 1.125rem;
+	font-weight: 300;
+	text-decoration: none;
+	text-align: center;
+	line-height: 42px;
+	height: 42px;
+	padding: 0 2em;
+	color: #FFFFFF;
+	border: none;
+	border-radius: 5px;
+	display: inline-block;
+	position: relative;
+	cursor: pointer;
+	z-index: 2;
+
+	&_green {
+		background: #b0cd3b;
+		box-shadow: 0 4px #798f21;
+	}
+	&_aqua {
+		background: #1bbc9d;
+		box-shadow: 0 4px #1f937d;
+	}
+	&:active {
+		box-shadow: none;
+		bottom: -4px;
+	}
+	&:focus {
+		outline: none;
+	}
+}

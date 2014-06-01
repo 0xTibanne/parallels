@@ -1,0 +1,21 @@
+$susy: (
+	math: static,
+	columns: 12,
+	column-width: 60px,
+	gutters: 20px/60px,
+	gutter-position: split,
+	global-box-sizing: border-box,
+	debug: (
+		image: hide,
+		color: rgba(#bada55, .50),
+		output: background,
+		toggle: top right,
+	)
+);
+
+.container {
+	@include container($susy);
+	// @include debug-vertical-alignment;
+	@include pie-clearfix;
+	height: 100%;
+}

@@ -1,0 +1,22 @@
+.social {
+
+	&__icon {
+		display: block;
+		height: 46px;
+		width: 46px;
+		font-size: 1.25rem;
+		text-align: center;
+		line-height: 46px;
+		color: #333;
+		float: left;
+		margin-right: 30px;
+		border-radius: 23px;
+		border: 5px solid rgba(255,255,255, 0.0);
+		background: #fff;
+		transition: all .3s ease-in-out;
+		&:hover {
+			border: 5px solid #FFF;
+			background: #b0cd3b;
+		}
+	}
+}

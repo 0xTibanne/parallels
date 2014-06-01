@@ -1,0 +1,24 @@
+.widget {
+	@include span(4);
+	color: #747474;
+	&__title {
+		color: #404040;
+		font-size: 1.125rem;
+		font-weight: bold;
+		height: rhythm(2);
+		line-height: rhythm(2);
+		border-bottom: 2px solid #DDD;
+		text-transform: uppercase;
+		@include margin-trailer;
+	}
+	&__item {
+		h4 {
+			font-size: 0.8125rem;
+			font-weight: bold;
+		}
+	}
+	.fa-twitter {
+		color: $link-hover;
+		font-size: 1rem;
+	}
+}
