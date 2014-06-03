@@ -21,7 +21,7 @@ module.exports = function(grunt) {
 					compass: true,
 					sourcemap: true,
 					require: ['susy'],
-					debugInfo: true
+					debugInfo: false
 				},
 				files: {                         // Dictionary of files
 					'css/style.css': 'scss/style.scss',
@@ -68,6 +68,7 @@ module.exports = function(grunt) {
 				src: [
 					'vendor/jquery/dist/jquery.js',
 					'vendor/jquery.easing/js/jquery.easing.js',
+					'vendor/jquery-waypoints/waypoints.js',
 					'vendor/glidejs/dist/jquery.glide.js',
 					'vendor/isotope/dist/isotope.pkgd.js',
 					'js/develop.js'

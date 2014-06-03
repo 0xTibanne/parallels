@@ -94,24 +94,13 @@ $(function() {
 	});
 
 
-	// Animation Services
+	// Animation
 
-	// $(window).scroll(function(event) {
-	// 	console.log(window.scrollY + 115);
-	// 	if (window.scrollY + 115 >= 965) {
-	// 		$('.services-item').removeClass('fade-out').addClass('fade-in');
-	// 	} else {
-	// 		$('.services-item').removeClass('fade-in').addClass('fade-out');
-	// 	}
-	// });
-
-	// $(window).scroll(function(){
-	//     if ($(this).scrollTop() > sliderHeight) {
-	//         $('.services-item').addClass('fade-in');
-	//     } else {
-	//         $('.services-item').removeClass('fade-in');
-	//     }
-	// });
+	$('.animation-wrapper').waypoint(function() {
+		$(this).find('.animated').addClass('running');
+	}, {
+		offset: '85%'
+	});
 
 
 

@@ -57,6 +57,21 @@ body {
 	// @include debug-vertical-alignment;
 }
 
+.running {
+	-webkit-animation-play-state: running !important;
+	animation-play-state: running !important;
+}
+.animated {
+	-webkit-animation-duration: 0.75s;
+	-moz-animation-duration: 0.75s;
+	-o-animation-duration: 0.75s;
+	animation-duration: 0.75s;
+	-webkit-animation-play-state: paused;
+	-moz-animation-play-state: paused;
+	-o-animation-play-state: paused;
+	animation-play-state: paused;
+}
+
 %image-title {
 	font-size: 3.75rem;
 	font-weight: 300;
