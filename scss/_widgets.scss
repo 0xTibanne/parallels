@@ -1,7 +1,9 @@
 .widget {
-	@include span(4);
+	@include span(4 of 12 nest);
 	color: #747474;
 	&__title {
+		@include span(4);
+		@include margin-trailer;
 		color: #404040;
 		font-size: 1.125rem;
 		font-weight: bold;
@@ -9,13 +11,17 @@
 		line-height: rhythm(2);
 		border-bottom: 2px solid #DDD;
 		text-transform: uppercase;
-		@include margin-trailer;
 	}
 	&__item {
+		@include span(4);
 		h4 {
 			font-size: 0.8125rem;
 			font-weight: bold;
 		}
+	}
+	&__img {
+		@include span(2 of 4);
+		@include margin-trailer(1);
 	}
 	.fa-twitter {
 		color: $link-hover;

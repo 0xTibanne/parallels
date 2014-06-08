@@ -12,24 +12,22 @@ module.exports = function(grunt) {
 					// dest: 'images/min/'
 				// }]
 			// }
-		// }
-		// ,
+		// },
+
 		sass: {
 			dist: {                            // Target
 				options: {                       // Target options
 					style: 'expanded',
 					compass: true,
 					sourcemap: true,
-					require: ['susy'],
-					debugInfo: false
+					require: ['susy']
 				},
 				files: {                         // Dictionary of files
 					'css/style.css': 'scss/style.scss',
 					'css/fa.css': 'vendor/fontawesome/scss/font-awesome.scss'       // 'destination': 'source', 'destination': 'source'
 				}
 			}
-		}
-		,
+		},
 
 		cssmin: {
 			add_banner: {
@@ -40,7 +38,7 @@ module.exports = function(grunt) {
 					'css/style.min.css': [
 						'css/style.css',
 						'css/fa.css',
-						'vendor/animate.scss/animate.css'
+						'vendor/animate.css/animate.css'
 					]
 				}
 			}

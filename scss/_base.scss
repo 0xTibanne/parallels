@@ -1,0 +1,38 @@
+// Variables and mixins
+
+$brand-primary:         #428bca;
+$brand-success:         #5cb85c;
+$brand-info:            #5bc0de;
+$brand-warning:         #f0ad4e;
+$brand-danger:          #d9534f;
+
+
+$site-bg-color: #FFFFFF;
+
+$header-color: #595959;
+$footer-color: #5C5C5C;
+
+// Text colors
+
+$text-images-color-1: #FFFFFF;
+$text-images-color-2: rgba(255,255,255,.8);
+
+// Reset
+
+// Core
+
+$header-height: 7.5rem !global;
+$footer-height: 7.5rem !global;
+
+// Colors
+
+$link-hover: #b0cd3b !global;
+
+@import 'compass/reset';
+@import "compass/css3";
+@import 'susy';
+
+// Meta
+
+@import 'meta/typography';
+@import 'meta/grid';

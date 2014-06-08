@@ -1,0 +1,80 @@
+.mail {
+	@include span(8 nest);
+	&__title {
+		@include span(8);
+		@include adjust-font-size-to(1.125rem, 2);
+		color: #404040;
+		font-weight: bold;
+		height: rhythm(2);
+		line-height: rhythm(2);
+		border-bottom: 2px solid #DDD;
+		text-transform: uppercase;
+		@include margin-trailer;
+		// @include trailing-border(2px, 0, 18px, solid #DDD);
+	}
+	&__input {
+		@include margin-trailer(1);
+		@include span(4);
+		font-size: 0.875rem;
+		height: rhythm(2);
+		padding: 0 10px;
+		background: #FFF;
+		border: none;
+	}
+	&__textarea {
+		@include span(8);
+		height: rhythm(8);
+		font-family: $base-font-family;
+		padding: 10px;
+		font-size: 0.875rem;
+		background: #FFF;
+		border: none;
+		resize: none;
+		overflow-y: auto;
+		float: left;
+	}
+	&__submit {
+		@include span(2);
+		@include margin-leader(1);
+		height: rhythm(2);
+		color: #FFF;
+		font-weight: 500;
+		background: #1bbc9d;
+		transition: all .2s ease-in-out;
+		border: none;
+		border-bottom: 2px solid #1f937d;
+		cursor: pointer;
+
+		&:hover {
+			background: #1bbc9d;
+			color: #FFFFFF;
+			border-bottom: 2px solid #1f937d;
+		}
+	}
+}
+
+.more {
+	@include span(4);
+
+	&__title {
+		@include margin-trailer;
+		color: #404040;
+		font-size: 1.125rem;
+		font-weight: bold;
+		height: rhythm(2);
+		line-height: rhythm(2);
+		border-bottom: 2px solid #DDD;
+		text-transform: uppercase;
+		// @include trailing-border(2px, 0, 18px, solid #DDD);
+	}
+
+	ul + ul {
+		@include margin-leader(2);
+	}
+
+	li {
+		@include adjust-font-size-to(1rem, 1);
+		color: #5c5c5c;
+	}
+
+}

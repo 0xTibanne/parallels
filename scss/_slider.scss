@@ -41,16 +41,16 @@
 	}
 
 	.slide1 {
-		background-image: url(/images/slide1.jpg);
+		background-image: url(/images/slide2.jpg);
 	}
 	.slide2 {
-		background-image: url(http://eatapapaya.com/Fore/images/slide2.jpg);
+		background-image: url(/images/slide3.jpg);
 	}
 	.slide3 {
-		background-image: url(http://eatapapaya.com/Fore/images/slide3.jpg);
+		background-image: url(/images/slide4.jpg);
 	}
 	.slide4 {
-		background-image: url(http://eatapapaya.com/Fore/images/slide4.jpg);
+		background-image: url(/images/slide5.jpg);
 	}
 
 	&-arrow {
@@ -95,10 +95,12 @@
 
 	h2 {
 		@extend %image-title;
+		@include full;
 		opacity: 0;
 	}
 	h3 {
 		@extend %image-desc;
+		@include full;
 		opacity: 0;
 		-webkit-animation-delay: .2s;
 		animation-delay: .2s;

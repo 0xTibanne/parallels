@@ -15898,10 +15898,10 @@ $(function() {
 
 	$('nav a[href^=#]').on('click', function(event) {
 		event.preventDefault();
-		var elementTarget = $(this).attr('href');
-		var destination = $(elementTarget).offset().top - headerHeight;
+		var $elementTarget = $(this).attr('href'),
+			$destination = $($elementTarget).offset().top - headerHeight;
 
-		$('body, html').animate({scrollTop: destination}, 300, 'easeInExpo');
+		$('body, html').animate({scrollTop: $destination}, 300, 'easeInExpo');
 	});
 
 
@@ -15930,13 +15930,13 @@ $(function() {
 	var $slideTitle = $('.slide-title'),
 		$slideDesc = $('.slide-desc');
 
-	$slideTitle.first().addClass('fade-up-big-in');
-	$slideDesc.first().addClass('fade-up-big-in');
+	$slideTitle.first().addClass('fadeInUpBig');
+	$slideDesc.first().addClass('fadeInUpBig');
 
 	// Animation slide title
 
-	var titleEffectIn = 'fade-up-big-in',
-		titleEffectOut = 'fade-up-big-out';
+	var titleEffectIn = 'fadeInUpBig',
+		titleEffectOut = 'fadeOutUpBig';
 
 
 	var glide = $slider.glide({
@@ -15990,13 +15990,28 @@ $(function() {
 
 	// Animation
 
-	$('.animation-wrapper').waypoint(function() {
-		$(this).find('.animated').addClass('running');
-	}, {
-		offset: '85%'
+	// $('.animation-wrapper').waypoint(function() {
+	// 	$(this).find('.animated').addClass('bounce-in');
+	// }, {
+	// 	offset: '85%'
+	// });
+
+
+
+	$( '.animation-wrapper' ).each( function(i) {
+		var $el = $( this ).find('.animated'),
+			animationClass = $el.attr( 'data-animate' );
+
+		$( this ).waypoint( function( direction ) {
+			if( direction === 'down' ) {
+				$el.addClass(animationClass);
+			}
+			else if( direction === 'up' ){
+				$el.removeClass(animationClass);
+			}
+		}, { offset: '70%' } );
+
 	});
-
-
 
 	// Isotope
 
@@ -16004,7 +16019,7 @@ $(function() {
 		animationEngine : 'best-available',
 		itemSelector : '.portfolio__thumbnail',
 		layoutMode : 'fitRows'
-	})
+	});
 
 
 	// Project Filtering
@@ -16038,5 +16053,32 @@ $(function() {
 		$(this).find('figcaption').removeClass('bounce-in');
 	});
 
+	// Flickr photo stream
+
+	loadPhotos();
+
+	function loadPhotos(){
+
+		var apiKey = '4b62f98647a658548e63b8727b6f57a1',
+			flickrMethod = 'flickr.interestingness.getList',
+			photoCount = '6',
+			extras = 'url_s';
+
+		$.ajax({
+			url:'https://www.flickr.com/services/rest/?method='+flickrMethod+
+			'&format=json&api_key='+apiKey+
+			'&extras='+extras+
+			'&per_page='+photoCount,
+			dataType: "jsonp"
+		});
+	}
 
 });
+
+function jsonFlickrApi(data) {
+	$.each(data.photos.photo, function(i,photo){
+		var imageTag = $('<img>');
+		imageTag.attr('src', photo.url_s).addClass('widget__img');
+		$('.js-flickr').append(imageTag);
+	});
+}

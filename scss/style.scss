@@ -1,43 +1,4 @@
-@import 'compass/reset-legacy';
-@import "compass/css3";
-@import 'typography';
-@import 'susy';
-
-// Variables and mixins
-
-$brand-primary:         #428bca;
-$brand-success:         #5cb85c;
-$brand-info:            #5bc0de;
-$brand-warning:         #f0ad4e;
-$brand-danger:          #d9534f;
-
-
-$base-font-family: 'Roboto', sans-serif;
-
-$site-bg-color: #FFFFFF;
-
-$header-color: #595959;
-$footer-color: #5C5C5C;
-
-// Text colors
-
-$text-images-color-1: #FFFFFF;
-$text-images-color-2: rgba(255,255,255,.8);
-
-// Reset
-
-// Core
-
-$header-height: 7.5rem !global;
-$footer-height: 7.5rem !global;
-
-// Colors
-
-$link-hover: #b0cd3b !global;
-
-// Grid
-
-@import 'grid';
+@import 'base';
 
 // Buttons
 
@@ -62,14 +23,11 @@ body {
 	animation-play-state: running !important;
 }
 .animated {
-	-webkit-animation-duration: 0.75s;
-	-moz-animation-duration: 0.75s;
-	-o-animation-duration: 0.75s;
-	animation-duration: 0.75s;
-	-webkit-animation-play-state: paused;
-	-moz-animation-play-state: paused;
-	-o-animation-play-state: paused;
-	animation-play-state: paused;
+	// -webkit-animation-play-state: paused;
+	// -moz-animation-play-state: paused;
+	// -o-animation-play-state: paused;
+	// animation-play-state: paused;
+	opacity: 0;
 }
 
 %image-title {
@@ -127,12 +85,14 @@ body {
 	h2 {
 		@extend %image-title;
 		@include margin-leader(6);
+		@include full;
 	}
 	h3 {
 		@extend %image-desc;
 		@include margin-trailer(1);
+		@include full;
 	}
-
+	background-size: cover;
 	// Overlay
 
 	// &:after {
@@ -157,7 +117,7 @@ body {
 		background-image: url(http://eatapapaya.com/Fore/images/evergreen.jpg);
 	}
 	&_social {
-		background-image: url(http://eatapapaya.com/Fore/images/evergreen.jpg);
+		background-image: url(/images/headline.jpg);
 	}
 
 }
@@ -255,100 +215,19 @@ body {
 		}
 	}
 	&__photo {
+		@include margin-trailer(1);
+		background: #DDD;
 		width: span(3);
 		height: span(3);
-		background: #DDD;
-		@include margin-trailer(1);
+		img {
+			max-width: 100%;
+		}
 	}
 }
 
 // Contacts
 
-.mail {
-	@include span(8);
-	&__title {
-		@include adjust-font-size-to(1.125rem, 2);
-		color: #404040;
-		font-weight: bold;
-		height: rhythm(2);
-		line-height: rhythm(2);
-		border-bottom: 2px solid #DDD;
-		text-transform: uppercase;
-		@include margin-trailer;
-		// @include trailing-border(2px, 0, 18px, solid #DDD);
-	}
-	&__input {
-		@include margin-trailer(1);
-		font-size: 0.875rem;
-		width: span(4);
-		height: rhythm(2);
-		padding: 0 10px;
-		float: left;
-		background: #FFF;
-		border: none;
-		&:nth-child(1) {
-			margin-right: gutter(1);
-		}
-		&:nth-child(2) {
-			margin-left: gutter(1);
-		}
-	}
-	&__textarea {
-		width:  span(8);
-		height: rhythm(8);
-		font-family: $base-font-family;
-		padding: 10px;
-		font-size: 0.875rem;
-		background: #FFF;
-		border: none;
-		resize: none;
-		overflow-y: auto;
-	}
-	&__submit {
-		height: 34px;
-		line-height: 34px;
-		width: span(2);
-		color: #FFF;
-		font-weight: 500;
-		background: #1bbc9d;
-		transition: all .2s ease-in-out;
-		border: none;
-		border-bottom: 2px solid #1f937d;
-		cursor: pointer;
-		@include margin-leader(1);
-
-		&:hover {
-			background: #1bbc9d;
-			color: #FFFFFF;
-			border-bottom: 2px solid #1f937d;
-		}
-	}
-}
-.more {
-	@include span(4);
-
-	&__title {
-		color: #404040;
-		font-size: 1.125rem;
-		font-weight: bold;
-		height: rhythm(2);
-		line-height: rhythm(2);
-		border-bottom: 2px solid #DDD;
-		text-transform: uppercase;
-		@include margin-trailer;
-		// @include trailing-border(2px, 0, 18px, solid #DDD);
-	}
-
-	ul + ul {
-		@include margin-leader(2);
-	}
-
-	li {
-		color: #5c5c5c;
-		@include adjust-font-size-to(1rem, 1);
-	}
-
-}
+@import 'mail';
 
 // Social icons
 

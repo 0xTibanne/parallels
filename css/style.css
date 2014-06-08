@@ -1,26 +1,26 @@
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
-del, dfn, em, font, img, ins, kbd, q, s, samp,
+del, dfn, em, img, ins, kbd, q, s, samp,
 small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
 dl, dt, dd, ol, ul, li,
 fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td {
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
   margin: 0;
   padding: 0;
   border: 0;
-  outline: 0;
-  font-weight: inherit;
-  font-style: inherit;
+  font: inherit;
   font-size: 100%;
-  font-family: inherit;
   vertical-align: baseline;
 }
 
-body {
+html {
   line-height: 1;
-  color: black;
-  background: white;
 }
 
 ol, ul {
@@ -28,9 +28,8 @@ ol, ul {
 }
 
 table {
-  border-collapse: separate;
+  border-collapse: collapse;
   border-spacing: 0;
-  vertical-align: middle;
 }
 
 caption, th, td {
@@ -40,14 +39,19 @@ caption, th, td {
 }
 
 q, blockquote {
-  quotes: "" "";
+  quotes: none;
 }
 q:before, q:after, blockquote:before, blockquote:after {
   content: "";
+  content: none;
 }
 
 a img {
   border: none;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+  display: block;
 }
 
 html {
@@ -155,7 +159,7 @@ p {
 }
 
 body {
-  font-family: "Roboto", sans-serif;
+  font-family: "Roboto";
   -webkit-transition: translste(0);
   transition: translste(0);
   -webkit-font-smoothing: antialiased !important;
@@ -168,14 +172,7 @@ body {
 }
 
 .animated {
-  -webkit-animation-duration: 0.75s;
-  -moz-animation-duration: 0.75s;
-  -o-animation-duration: 0.75s;
-  animation-duration: 0.75s;
-  -webkit-animation-play-state: paused;
-  -moz-animation-play-state: paused;
-  -o-animation-play-state: paused;
-  animation-play-state: paused;
+  opacity: 0;
 }
 
 .headline h2, .slider h2 {
@@ -234,12 +231,23 @@ body {
   height: 27rem;
   /* 27*15 = 432px */
   position: relative;
+  background-size: cover;
 }
 .headline h2 {
   margin-top: 9rem;
+  clear: both;
+  width: 58.75rem;
+  float: left;
+  margin-left: 0.625rem;
+  margin-right: 0.625rem;
 }
 .headline h3 {
   margin-bottom: 1.5rem;
+  clear: both;
+  width: 58.75rem;
+  float: left;
+  margin-left: 0.625rem;
+  margin-right: 0.625rem;
 }
 .headline_purchase {
   background-image: url(http://eatapapaya.com/Fore/images/evergreen.jpg);
@@ -251,7 +259,7 @@ body {
   background-image: url(http://eatapapaya.com/Fore/images/evergreen.jpg);
 }
 .headline_social {
-  background-image: url(http://eatapapaya.com/Fore/images/evergreen.jpg);
+  background-image: url(/images/headline.jpg);
 }
 
 .header {
@@ -345,16 +353,16 @@ body {
   background-position: center center;
 }
 .slider .slide1 {
-  background-image: url(/images/slide1.jpg);
+  background-image: url(/images/slide2.jpg);
 }
 .slider .slide2 {
-  background-image: url(http://eatapapaya.com/Fore/images/slide2.jpg);
+  background-image: url(/images/slide3.jpg);
 }
 .slider .slide3 {
-  background-image: url(http://eatapapaya.com/Fore/images/slide3.jpg);
+  background-image: url(/images/slide4.jpg);
 }
 .slider .slide4 {
-  background-image: url(http://eatapapaya.com/Fore/images/slide4.jpg);
+  background-image: url(/images/slide5.jpg);
 }
 .slider-arrow {
   position: absolute;
@@ -396,9 +404,19 @@ body {
   background: #ccc;
 }
 .slider h2 {
+  clear: both;
+  width: 58.75rem;
+  float: left;
+  margin-left: 0.625rem;
+  margin-right: 0.625rem;
   opacity: 0;
 }
 .slider h3 {
+  clear: both;
+  width: 58.75rem;
+  float: left;
+  margin-left: 0.625rem;
+  margin-right: 0.625rem;
   opacity: 0;
   -webkit-animation-delay: .2s;
   animation-delay: .2s;
@@ -413,27 +431,15 @@ body {
 }
 .services__item:nth-of-type(1) .services__icon {
   background: #f0f0f0 url(/images/browser.png) no-repeat center;
-  animation-delay: 4s;
-  -webkit-animation-delay: 4s;
-  /* Safari and Chrome */
 }
 .services__item:nth-of-type(2) .services__icon {
   background: #f0f0f0 url(/images/pocket.png) no-repeat center;
-  animation-delay: 2s;
-  -webkit-animation-delay: 2s;
-  /* Safari and Chrome */
 }
 .services__item:nth-of-type(3) .services__icon {
-  background: #f0f0f0 url(/images/camera.png) no-repeat center;
-  animation-delay: 2s;
-  -webkit-animation-delay: 2s;
-  /* Safari and Chrome */
+  background: #f0f0f0 url(/images/trash.png) no-repeat center;
 }
 .services__item:nth-of-type(4) .services__icon {
-  background: #f0f0f0 url(/images/trash.png) no-repeat center;
-  animation-delay: 4s;
-  -webkit-animation-delay: 4s;
-  /* Safari and Chrome */
+  background: #f0f0f0 url(/images/camera.png) no-repeat center;
 }
 .services__icon {
   width: 6rem;
@@ -603,19 +609,24 @@ body {
   color: #818181;
 }
 .team__photo {
+  margin-bottom: 1.5rem;
+  background: #DDD;
   width: 220px;
   height: 220px;
-  background: #DDD;
-  margin-bottom: 1.5rem;
+}
+.team__photo img {
+  max-width: 100%;
 }
 
 .mail {
+  width: 40rem;
+  float: left;
+}
+.mail__title {
   width: 38.75rem;
   float: left;
   margin-left: 0.625rem;
   margin-right: 0.625rem;
-}
-.mail__title {
   font-size: 1.125rem;
   line-height: 3rem;
   color: #404040;
@@ -628,35 +639,38 @@ body {
 }
 .mail__input {
   margin-bottom: 1.5rem;
+  width: 18.75rem;
+  float: left;
+  margin-left: 0.625rem;
+  margin-right: 0.625rem;
   font-size: 0.875rem;
-  width: 300px;
   height: 3rem;
   padding: 0 10px;
-  float: left;
   background: #FFF;
   border: none;
 }
-.mail__input:nth-child(1) {
-  margin-right: 10px;
-}
-.mail__input:nth-child(2) {
-  margin-left: 10px;
-}
 .mail__textarea {
-  width: 620.0px;
+  width: 38.75rem;
+  float: left;
+  margin-left: 0.625rem;
+  margin-right: 0.625rem;
   height: 12rem;
-  font-family: "Roboto", sans-serif;
+  font-family: "Roboto";
   padding: 10px;
   font-size: 0.875rem;
   background: #FFF;
   border: none;
   resize: none;
   overflow-y: auto;
+  float: left;
 }
 .mail__submit {
-  height: 34px;
-  line-height: 34px;
-  width: 140px;
+  width: 8.75rem;
+  float: left;
+  margin-left: 0.625rem;
+  margin-right: 0.625rem;
+  margin-top: 1.5rem;
+  height: 3rem;
   color: #FFF;
   font-weight: 500;
   background: #1bbc9d;
@@ -664,7 +678,6 @@ body {
   border: none;
   border-bottom: 2px solid #1f937d;
   cursor: pointer;
-  margin-top: 1.5rem;
 }
 .mail__submit:hover {
   background: #1bbc9d;
@@ -679,6 +692,7 @@ body {
   margin-right: 0.625rem;
 }
 .more__title {
+  margin-bottom: 1.5rem;
   color: #404040;
   font-size: 1.125rem;
   font-weight: bold;
@@ -686,31 +700,29 @@ body {
   line-height: 3rem;
   border-bottom: 2px solid #DDD;
   text-transform: uppercase;
-  margin-bottom: 1.5rem;
 }
 .more ul + ul {
   margin-top: 3rem;
 }
 .more li {
-  color: #5c5c5c;
   font-size: 1rem;
   line-height: 1.5rem;
+  color: #5c5c5c;
 }
 
 .social__icon {
-  display: block;
   height: 46px;
   width: 46px;
   font-size: 1.25rem;
   text-align: center;
   line-height: 46px;
   color: #333;
-  float: left;
   margin-right: 30px;
   border-radius: 23px;
   border: 5px solid rgba(255, 255, 255, 0);
   background: #fff;
   transition: all .3s ease-in-out;
+  float: left;
 }
 .social__icon:hover {
   border: 5px solid #FFF;
@@ -718,13 +730,16 @@ body {
 }
 
 .widget {
+  width: 20rem;
+  float: left;
+  color: #747474;
+}
+.widget__title {
   width: 18.75rem;
   float: left;
   margin-left: 0.625rem;
   margin-right: 0.625rem;
-  color: #747474;
-}
-.widget__title {
+  margin-bottom: 1.5rem;
   color: #404040;
   font-size: 1.125rem;
   font-weight: bold;
@@ -732,11 +747,23 @@ body {
   line-height: 3rem;
   border-bottom: 2px solid #DDD;
   text-transform: uppercase;
-  margin-bottom: 1.5rem;
+}
+.widget__item {
+  width: 18.75rem;
+  float: left;
+  margin-left: 0.625rem;
+  margin-right: 0.625rem;
 }
 .widget__item h4 {
   font-size: 0.8125rem;
   font-weight: bold;
+}
+.widget__img {
+  width: 8.75rem;
+  float: left;
+  margin-left: 0.625rem;
+  margin-right: 0.625rem;
+  margin-bottom: 1.5rem;
 }
 .widget .fa-twitter {
   color: #b0cd3b;
