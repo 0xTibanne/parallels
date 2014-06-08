@@ -1,5 +1,5 @@
 .widget {
-	@include span(4 of 12 nest);
+	@include span(4 nest);
 	color: #747474;
 	&__title {
 		@include span(4);
@@ -20,8 +20,9 @@
 		}
 	}
 	&__img {
-		@include gallery(2 of 4);
-		// @include margin-trailer(1);
+		// @include gallery(1, nth-of-type);
+		@include span(1);
+		@include margin-trailer(1);
 	}
 	.fa-twitter {
 		color: $link-hover;

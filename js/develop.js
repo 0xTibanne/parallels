@@ -154,9 +154,9 @@ $(function() {
 	// Portfolio
 
 	$('.portfolio__thumbnail').hover(function() {
-		$(this).find('figcaption').addClass('bounce-in');
+		$(this).find('figcaption').addClass('bounceIn');
 	}, function() {
-		$(this).find('figcaption').removeClass('bounce-in');
+		$(this).find('figcaption').removeClass('bounceIn');
 	});
 
 	// Flickr photo stream
@@ -167,8 +167,8 @@ $(function() {
 
 		var apiKey = '4b62f98647a658548e63b8727b6f57a1',
 			flickrMethod = 'flickr.interestingness.getList',
-			photoCount = '6',
-			extras = 'url_s';
+			photoCount = '16',
+			extras = 'url_q';
 
 		$.ajax({
 			url:'https://www.flickr.com/services/rest/?method='+flickrMethod+
@@ -184,7 +184,7 @@ $(function() {
 function jsonFlickrApi(data) {
 	$.each(data.photos.photo, function(i,photo){
 		var imageTag = $('<img>');
-		imageTag.attr('src', photo.url_s).addClass('widget__img');
+		imageTag.attr('src', photo.url_q).addClass('widget__img');
 		$('.js-flickr').append(imageTag);
 	});
 }
