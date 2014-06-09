@@ -1,8 +1,7 @@
 .widget {
-	@include span(4 nest);
-	color: #747474;
+
 	&__title {
-		@include span(4);
+		@include span(12);
 		@include margin-trailer;
 		color: #404040;
 		font-size: 1.125rem;
@@ -13,19 +12,36 @@
 		text-transform: uppercase;
 	}
 	&__item {
-		@include span(4);
+		@include span(12);
+		color: #747474;
+
 		h4 {
 			font-size: 0.8125rem;
 			font-weight: bold;
 		}
 	}
 	&__img {
-		// @include gallery(1, nth-of-type);
-		@include span(1);
+		@include span(3);
 		@include margin-trailer(1);
 	}
 	.fa-twitter {
 		color: $link-hover;
 		font-size: 1rem;
+	}
+
+	@include breakpoint($screen-sm) {
+		@include span(4 nest);
+
+		&__title {
+			@include span(4 of 4);
+		}
+
+		&__item {
+			@include span(4 of 4);
+		}
+
+		&__img {
+			@include span(1 of 4);
+		}
 	}
 }

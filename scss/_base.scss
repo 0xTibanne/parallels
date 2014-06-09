@@ -28,6 +28,12 @@ $footer-height: 7.5rem !global;
 
 $link-hover: #b0cd3b !global;
 
+// Responsive
+
+$screen-sm: 768px   !global;
+$screen-md: 992px   !global;
+$screen-lg: 1200px  !global;
+
 @import 'compass/reset';
 @import "compass/css3";
 @import 'breakpoint';

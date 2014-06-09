@@ -1,21 +1,36 @@
 $susy: (
-	math: static,
+	math: fluid,
 	columns: 12,
-	column-width: 60px,
-	gutters: 20px/60px,
 	gutter-position: split,
 	global-box-sizing: border-box,
 	debug: (
-		image: hide,
-		color: rgba(#bada55, .50),
+		image: show,
+		color: rgba(#c7254e, .50),
 		output: background,
 		toggle: top right,
 	)
 );
-
 .container {
-	@include container($susy);
+
 	// @include debug-vertical-alignment;
+
+	@include container(95%);
+
+	@include breakpoint($screen-sm) {
+
+		@include container(48em);
+	}
+
+	@include breakpoint($screen-md) {
+
+		@include container(62em);
+	}
+
+	@include breakpoint($screen-lg) {
+
+		@include container(75em);
+	}
+
 	@include pie-clearfix;
 	height: 100%;
 }

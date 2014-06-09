@@ -8,14 +8,11 @@
 	background: rgba(255,255,255, 0.9);
 
 	nav {
-		float: right;
+		@include span(10 last);
 		ul {
-			list-style: none;
-			padding: 0;
-			margin: 0;
-			li {
-				float: left;
-				margin-right: 40px;
+			@include inline-block-list(20px);
+			text-align: right;
+
 				a {
 					text-decoration: none;
 					line-height: $header-height;
@@ -27,7 +24,6 @@
 						color: $link-hover;
 					}
 				}
-			}
 		}
 	}
 }

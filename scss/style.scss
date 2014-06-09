@@ -108,13 +108,13 @@ body {
 
 	// Modificators
 	&_purchase {
-		background-image: url(http://eatapapaya.com/Fore/images/evergreen.jpg);
+		background-image: url(/images/headline.jpg);
 	}
 	&_pricing {
-		background-image: url(http://eatapapaya.com/Fore/images/evergreen.jpg);
+		background-image: url(/images/headline.jpg);
 	}
 	&_about {
-		background-image: url(http://eatapapaya.com/Fore/images/evergreen.jpg);
+		background-image: url(/images/headline.jpg);
 	}
 	&_social {
 		background-image: url(/images/headline.jpg);
@@ -199,7 +199,7 @@ body {
 
 .team {
 	&__item {
-		@include span(3);
+		@include span(6);
 		text-align: center;
 		h3 {
 			@include adjust-font-size-to(1.25rem, 1);
@@ -216,11 +216,17 @@ body {
 	}
 	&__photo {
 		@include margin-trailer(1);
-		background: #DDD;
-		width: span(3);
-		height: span(3);
+
 		img {
 			max-width: 100%;
+			width: 100%;
+		}
+	}
+
+	@include breakpoint($screen-sm) {
+
+		&__item {
+			@include span(3);
 		}
 	}
 }
