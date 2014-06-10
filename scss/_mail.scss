@@ -34,8 +34,9 @@
 		float: left;
 	}
 	&__submit {
-		@include span(12 of 12);
+		@include squish(4);
 		@include margin-leader(1);
+		width: span(4);
 		height: rhythm(2);
 		color: #FFF;
 		font-weight: 500;

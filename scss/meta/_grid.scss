@@ -16,15 +16,15 @@ $susy: (
 
 	@include container(95%);
 
-	@include breakpoint($screen-sm) {
+	// @include breakpoint($screen-sm) {
 
-		@include container(48em);
-	}
+	// 	@include container(48em);
+	// }
 
-	@include breakpoint($screen-md) {
+	// @include breakpoint($screen-md) {
 
-		@include container(62em);
-	}
+	// 	@include container(62em);
+	// }
 
 	@include breakpoint($screen-lg) {
 

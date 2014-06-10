@@ -121,44 +121,6 @@ p {
   display: block;
   clear: both;
 }
-@media (min-width: 768px) {
-  .container {
-    max-width: 48em;
-    margin-left: auto;
-    margin-right: auto;
-    background-image: -moz-linear-gradient(left, rgba(0, 0, 0, 0) 10%, rgba(199, 37, 78, 0.5) 10%, rgba(224, 88, 123, 0.5) 90%, rgba(0, 0, 0, 0) 90%), -moz-linear-gradient(top, #e0ebeb 5%, rgba(224, 235, 235, 0) 5%);
-    background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, 0) 10%, rgba(199, 37, 78, 0.5) 10%, rgba(224, 88, 123, 0.5) 90%, rgba(0, 0, 0, 0) 90%), -webkit-linear-gradient(top, #e0ebeb 5%, rgba(224, 235, 235, 0) 5%);
-    background-image: linear-gradient(to right, rgba(0, 0, 0, 0) 10%, rgba(199, 37, 78, 0.5) 10%, rgba(224, 88, 123, 0.5) 90%, rgba(0, 0, 0, 0) 90%), linear-gradient(to bottom, #e0ebeb 5%, rgba(224, 235, 235, 0) 5%);
-    background-size: 8.33333%, 100% 24px;
-    background-origin: content-box, border-box;
-    background-clip: content-box, border-box;
-    background-position: left top;
-  }
-  .container:after {
-    content: " ";
-    display: block;
-    clear: both;
-  }
-}
-@media (min-width: 992px) {
-  .container {
-    max-width: 62em;
-    margin-left: auto;
-    margin-right: auto;
-    background-image: -moz-linear-gradient(left, rgba(0, 0, 0, 0) 10%, rgba(199, 37, 78, 0.5) 10%, rgba(224, 88, 123, 0.5) 90%, rgba(0, 0, 0, 0) 90%), -moz-linear-gradient(top, #e0ebeb 5%, rgba(224, 235, 235, 0) 5%);
-    background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, 0) 10%, rgba(199, 37, 78, 0.5) 10%, rgba(224, 88, 123, 0.5) 90%, rgba(0, 0, 0, 0) 90%), -webkit-linear-gradient(top, #e0ebeb 5%, rgba(224, 235, 235, 0) 5%);
-    background-image: linear-gradient(to right, rgba(0, 0, 0, 0) 10%, rgba(199, 37, 78, 0.5) 10%, rgba(224, 88, 123, 0.5) 90%, rgba(0, 0, 0, 0) 90%), linear-gradient(to bottom, #e0ebeb 5%, rgba(224, 235, 235, 0) 5%);
-    background-size: 8.33333%, 100% 24px;
-    background-origin: content-box, border-box;
-    background-clip: content-box, border-box;
-    background-position: left top;
-  }
-  .container:after {
-    content: " ";
-    display: block;
-    clear: both;
-  }
-}
 @media (min-width: 1200px) {
   .container {
     max-width: 75em;
@@ -624,25 +586,19 @@ body {
 }
 
 .price-table {
-  width: 31.66667%;
+  width: 48.33333%;
   float: left;
   margin-left: 0.83333%;
   margin-right: 0.83333%;
   margin-bottom: 3rem;
-  text-align: center;
-  background: #f4f4f4;
   -moz-border-radius: 5px;
   -webkit-border-radius: 5px;
   border-radius: 5px;
   -moz-box-shadow: 0 2px #eeeeee;
   -webkit-box-shadow: 0 2px #eeeeee;
   box-shadow: 0 2px #eeeeee;
-}
-.price-table:nth-of-type(4), .price-table:nth-of-type(5), .price-table:nth-of-type(6), .price-table:nth-of-type(7) {
-  width: 23.33333%;
-  float: left;
-  margin-left: 0.83333%;
-  margin-right: 0.83333%;
+  text-align: center;
+  background: #f4f4f4;
 }
 .price-table__title {
   font-size: 1.25rem;
@@ -651,10 +607,10 @@ body {
   color: #5c5c5c;
 }
 .price-table__tarrif {
-  background: #1bbc9d;
-  border-bottom: 3px solid #17987f;
-  height: 3rem;
   margin-bottom: 1.5rem;
+  height: 3rem;
+  border-bottom: 3px solid #17987f;
+  background: #1bbc9d;
 }
 .price-table__tarrif p {
   font-size: 1rem;
@@ -676,6 +632,14 @@ body {
 }
 .price-table__purchase {
   height: 4.5rem;
+}
+@media (min-width: 992px) {
+  .price-table {
+    width: 23.33333%;
+    float: left;
+    margin-left: 0.83333%;
+    margin-right: 0.83333%;
+  }
 }
 
 .team__item {
@@ -761,11 +725,10 @@ body {
   float: left;
 }
 .mail__submit {
-  width: 98.33333%;
-  float: left;
-  margin-left: 0.83333%;
-  margin-right: 0.83333%;
+  margin-left: 34.16667%;
+  margin-right: 34.16667%;
   margin-top: 1.5rem;
+  width: 31.66667%;
   height: 3rem;
   color: #FFF;
   font-weight: 500;

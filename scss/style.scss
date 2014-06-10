@@ -143,18 +143,18 @@ body {
 //  Price
 
 .price-table {
-	@include span(4);
-	&:nth-of-type(4),
-	&:nth-of-type(5),
-	&:nth-of-type(6),
-	&:nth-of-type(7) {
-		@include span(3);
-	}
+	@include span(6);
+	// &:nth-of-type(4),
+	// &:nth-of-type(5),
+	// &:nth-of-type(6),
+	// &:nth-of-type(7) {
+	// 	@include span(3);
+	// }
 	@include margin-trailer(2);
-	text-align: center;
-	background: #f4f4f4;
 	@include border-radius(5px);
 	@include box-shadow(0 2px #EEE);
+	text-align: center;
+	background: #f4f4f4;
 
 	&__header {
 
@@ -165,10 +165,10 @@ body {
 		color: #5c5c5c;
 	}
 	&__tarrif {
-		background: #1bbc9d;
-		border-bottom: 3px solid #17987f;
-		height: rhythm(2);
 		@include margin-trailer;
+		height: rhythm(2);
+		border-bottom: 3px solid #17987f;
+		background: #1bbc9d;
 		p {
 			font-size: 1rem;
 			font-weight: bold;
@@ -190,6 +190,13 @@ body {
 	}
 	&__purchase {
 		height: rhythm(3);
+	}
+
+
+	@include breakpoint($screen-md) {
+
+		@include span(3);
+
 	}
 
 
