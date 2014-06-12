@@ -9,20 +9,20 @@
 	$grid-background-baseline-color: 	lighten(#699, 40%) 		!global;
 }
 
-@include rhytm-config(16px);
-@include establish-baseline;
+@include breakpoint(screen-xs) {
+	@include rhytm-config(10px);
+	@include establish-baseline;
+}
 
-h1, h2, h3, h4, h5, h6 {
-	// background: rgba(orange,.5);
+@include breakpoint(screen-sm) {
+	@include rhytm-config(16px);
+	@include establish-baseline;
 }
 
 h1 { @include adjust-font-size-to(3.157rem); }
-h2 {
-	@include adjust-font-size-to(2.369rem);
-	@include margin-trailer;
-}
+h2 { @include adjust-font-size-to(2.369rem); }
 h3 { @include adjust-font-size-to(1.777rem);}
-h4 { @include adjust-font-size-to(1.333rem, 1); }
+h4 { @include adjust-font-size-to(1.333rem); }
 h5 { @include adjust-font-size-to(1rem); }
 h6 { @include adjust-font-size-to(0.75rem); }
 
@@ -32,9 +32,4 @@ p {
 	@include adjust-font-size-to(0.8125rem);
 	@include hyphenation;
 	@include margin-trailer;
-	// background: rgba(green,.5);
 }
-
-// .portfolio {
-// 	@include adjust-leading-to(1);
-// }

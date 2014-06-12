@@ -8,7 +8,7 @@
 	background: rgba(255,255,255, 0.9);
 
 	nav {
-		@include span(10 last);
+		@include span(9 last);
 		ul {
 			@include inline-block-list(20px);
 			text-align: right;
@@ -28,7 +28,7 @@
 	}
 }
 .logo {
-	@include span(2);
+	@include span(3);
 	font-size: 1.5em;
 	line-height: $header-height;
 	text-decoration: none;

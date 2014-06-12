@@ -20,7 +20,7 @@ module.exports = function(grunt) {
 					style: 'expanded',
 					compass: true,
 					sourcemap: true,
-					require: ['susy']
+//					require: ['susy']
 				},
 				files: {                         // Dictionary of files
 					'css/style.css': 'scss/style.scss',
