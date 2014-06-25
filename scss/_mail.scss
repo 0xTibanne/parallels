@@ -1,104 +1,95 @@
 .mail {
-	@include span(12 nest);
-	&__title {
-		@include span(12 of 12);
-		@include margin-trailer;
-		@include adjust-font-size-to(1.125rem, 2);
-		color: #404040;
-		font-weight: bold;
-		height: rhythm(2);
-		line-height: rhythm(2);
-		border-bottom: 2px solid #DDD;
-		text-transform: uppercase;
-		// @include trailing-border(2px, 0, 18px, solid #DDD);
-	}
-	&__input {
-		@include margin-trailer(1);
-		@include span(6 of 12);
-		font-size: 0.875rem;
-		height: rhythm(2);
-		padding: 0 10px;
-		background: #FFF;
-		border: none;
-	}
-	&__textarea {
-		@include span(12 of 12);
-		height: rhythm(8);
-		font-family: $base-font-family;
-		padding: 10px;
-		font-size: 0.875rem;
-		background: #FFF;
-		border: none;
-		resize: none;
-		overflow-y: auto;
-		float: left;
-	}
-	&__submit {
-		@include squish(4);
-		@include margin-leader(1);
-		width: span(4);
-		height: rhythm(2);
-		color: #FFF;
-		font-weight: 500;
-		background: #1bbc9d;
-		transition: all .2s ease-in-out;
-		border: none;
-		border-bottom: 2px solid #1f937d;
-		cursor: pointer;
 
-		&:hover {
-			background: #1bbc9d;
-			color: #FFFFFF;
-			border-bottom: 2px solid #1f937d;
-		}
-	}
+  &__title {
+    @include span(12 of 12);
+    @include margin-trailer;
+    @include adjust-font-size-to(1.125rem, 2);
+    color: #404040;
+    font-weight: bold;
+    height: rhythm(2);
+    line-height: rhythm(2);
+    border-bottom: 2px solid #DDD;
+    text-transform: uppercase;
+  }
+  &__input {
+    @include span(12 of 12);
+    @include margin-trailer(1);
+    font-size: 0.875rem;
+    height: rhythm(2);
+    padding: 0 10px;
+    background: #FFF;
+    border: none;
+  }
+  &__textarea {
+    @include span(12 of 12);
+    height: rhythm(8);
+    font-family: $base-font-family;
+    padding: 10px;
+    font-size: 0.875rem;
+    background: #FFF;
+    border: none;
+    resize: none;
+    overflow-y: auto;
+    float: left;
+  }
+  &__submit {
+    @include rhythm-margins(1);
+  }
 
-	@include breakpoint($screen-sm) {
 
-		@include span(8 nest);
-		&__title {
-			@include span(8 of 8);
-		}
-		&__input {
-			@include span(4 of 8);
-		}
-		&__textarea {
-			@include span(8 of 8);
-		}
-		&__submit {
-			@include span(2 of 8);
-		}
-	}
+  //  Breakpoints
+
+  @include breakpoint($screen-xs) {
+    &__input {
+      @include span(6 of 12);
+    }
+  }
+
+  @include breakpoint($screen-sm) {
+
+    @include span(8 nest);
+    &__title {
+      @include span(8 of 8);
+    }
+    &__input {
+      @include span(4 of 8);
+    }
+    &__textarea {
+      @include span(8 of 8);
+    }
+    &__submit {
+      @include gutters(8);
+    }
+  }
 }
 
 .more {
-	@include span(12);
+  @include span(12);
 
-	&__title {
-		@include margin-trailer;
-		color: #404040;
-		font-size: 1.125rem;
-		font-weight: bold;
-		height: rhythm(2);
-		line-height: rhythm(2);
-		border-bottom: 2px solid #DDD;
-		text-transform: uppercase;
-		// @include trailing-border(2px, 0, 18px, solid #DDD);
-	}
+  &__title {
+    @include margin-trailer;
+    height: rhythm(2);
+    color: #404040;
+    font-size: 1.125rem;
+    font-weight: bold;
+    line-height: rhythm(2);
+    border-bottom: 2px solid #DDD;
+    text-transform: uppercase;
+  }
 
-	li {
-		@include adjust-font-size-to(1rem, 1);
-		color: #5c5c5c;
-	}
+  li {
+    @include adjust-font-size-to(1rem, 1);
+    color: #5c5c5c;
+  }
 
+  // Breakpoints
 
-	@include breakpoint($screen-sm) {
+  @include breakpoint($screen-sm) {
+    @include span(4);
 
-		@include span(4);
-
-		ul + ul {
-			@include margin-leader(2);
-		}
-	}
+    ul + ul {
+      @include margin-leader(2);
+    }
+  }
 
 }

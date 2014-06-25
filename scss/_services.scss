@@ -1,51 +1,52 @@
 .services {
 
-	h3 {
-		@extend %heading-2;
-	}
-	p {
-		@extend %text;
-	}
+  h3 {
+    @extend %heading-2;
+  }
+  p {
+    @extend %text;
+  }
 
-	&__item {
-		@include span(full);
+  &__item {
+    @include span(full);
+    @include margin-trailer(1);
 
-		text-align: center;
+    text-align: center;
 
-		&:nth-of-type(1) .services__icon  {
-			background: #f0f0f0 url(/images/browser.png) no-repeat center;
-		}
-		&:nth-of-type(2) .services__icon  {
-			background: #f0f0f0 url(/images/pocket.png) no-repeat center;
-		}
-		&:nth-of-type(3) .services__icon  {
-			background: #f0f0f0 url(/images/trash.png) no-repeat center;
-		}
-		&:nth-of-type(4) .services__icon  {
-			background: #f0f0f0 url(/images/camera.png) no-repeat center;
-		}
-	}
+    &:nth-of-type(1) .services__icon  {
+      background: #f0f0f0 url(/images/browser.png) no-repeat center;
+    }
+    &:nth-of-type(2) .services__icon  {
+      background: #f0f0f0 url(/images/pocket.png) no-repeat center;
+    }
+    &:nth-of-type(3) .services__icon  {
+      background: #f0f0f0 url(/images/trash.png) no-repeat center;
+    }
+    &:nth-of-type(4) .services__icon  {
+      background: #f0f0f0 url(/images/camera.png) no-repeat center;
+    }
+  }
 
-	&__icon {
-		width: 6rem;
-		height: 6rem;
-		border-radius: 50%;
-		display: block;
-		margin: 0 auto;
-	}
+  &__icon {
+    width: 6rem;
+    height: 6rem;
+    border-radius: 50%;
+    display: block;
+    margin: 0 auto;
+  }
 
-	//	Breakpoints
+  //  Breakpoints
 
-	@include breakpoint($screen-xs) {
-		&__item {
-			@include span(6);
-		}
-	}
+  @include breakpoint($screen-xs) {
+    &__item {
+      @include span(6);
+    }
+  }
 
-	@include breakpoint($screen-sm) {
-		&__item {
-			@include span(3);
-		}
-	}
+  @include breakpoint($screen-sm) {
+    &__item {
+      @include span(3);
+    }
+  }
 
 }

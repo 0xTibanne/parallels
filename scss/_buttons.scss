@@ -1,32 +1,92 @@
-.button {
-	font-size: 1.125rem;
-	font-weight: 300;
-	text-decoration: none;
-	text-align: center;
-	line-height: 42px;
-	height: 42px;
-	padding: 0 2em;
-	color: #FFFFFF;
-	border: none;
-	border-radius: 5px;
-	display: inline-block;
-	position: relative;
-	cursor: pointer;
-	z-index: 2;
+$button-namespace: '.button' !global;
+$button-text-color: #ffffff !global;
+$button-color-aqua: #1bbc9d !global;
 
-	&_green {
-		background: #b0cd3b;
-		box-shadow: 0 4px #798f21;
-	}
-	&_aqua {
-		background: #1bbc9d;
-		box-shadow: 0 4px #1f937d;
-	}
-	&:active {
-		box-shadow: none;
-		bottom: -4px;
-	}
-	&:focus {
-		outline: none;
-	}
+%button-base {
+  font: {
+    size: 1.125rem;
+    weight: 500;
+  }
+  text: {
+    decoration: none;
+    align: center;
+  }
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+  line-height: rhythm(2);
+  height: rhythm(2);
+  padding: 0 2em;
+  color: $button-text-color;
+  border: none;
+  @include transition(all .2s ease-in-out);
+  @include gutters();
+}
+
+#{$button-namespace} {
+
+  // 3D Button
+
+  &-3d {
+
+    @extend %button-base;
+    border-radius: 5px;
+
+    &_green {
+      background: #b0cd3b;
+      box-shadow: 0 4px #798f21;
+      &:hover {
+        background: darken(#b0cd3b, 10%);
+        box-shadow: 0 4px darken(#798f21, 10%);
+      }
+    }
+    &_aqua {
+      background: $button-color-aqua;
+      box-shadow: 0 4px #1f937d;
+      &:hover {
+        background: darken($button-color-aqua, 10%);
+        box-shadow: 0 4px darken(#1f937d, 10%);
+      }
+    }
+    &:active {
+      box-shadow: none;
+      bottom: -4px;
+    }
+    &:focus {
+      outline: none;
+    }
+  }
+
+  // Flat Button
+
+  &-flat {
+
+    @extend %button-base;
+
+    &_green {
+      background: #b0cd3b;
+      border-bottom: 2px solid #798f21;
+      &:hover {
+        background: lighten(#b0cd3b, 5%);
+        border-color: lighten(#798f21, 5%);
+      }
+    }
+    &_aqua {
+      background: $button-color-aqua;
+      border-bottom: 2px solid darken($button-color-aqua, 10%);
+      &:hover {
+        background: lighten($button-color-aqua, 5%);
+        border-color: darken($button-color-aqua, 5%);
+      }
+      &:active {
+        background: desaturate($button-color-aqua, 20%);
+        border-color: desaturate($button-color-aqua, 25%);
+        color: darken($button-text-color, 20%);
+      }
+    }
+
+    &:focus {
+      outline: none;
+    }
+  }
 }

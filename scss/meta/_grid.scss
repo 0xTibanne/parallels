@@ -1,36 +1,23 @@
 $susy: (
-	math: fluid,
-	columns: 12,
-	gutter-position: split,
-	global-box-sizing: border-box,
-	debug: (
-		image: show,
-		color: rgba(#c7254e, .50),
-		output: background,
-		toggle: top right,
-	)
+  math: fluid,
+  columns: 12,
+  gutter-position: split,
+  global-box-sizing: border-box,
+  debug: (
+    image: show,
+    color: rgba(#18576a, .3),
+    output: background,
+    toggle: top right,
+  )
 );
+
 .container {
+  // @include debug-vertical-alignment;
+  @include container(95%);
+  @include pie-clearfix;
+  height: 100%;
 
-	// @include debug-vertical-alignment;
-
-	@include container(95%);
-
-	// @include breakpoint($screen-sm) {
-
-	// 	@include container(48em);
-	// }
-
-	// @include breakpoint($screen-md) {
-
-	// 	@include container(62em);
-	// }
-
-	@include breakpoint($screen-lg) {
-
-		@include container(75em);
-	}
-
-	@include pie-clearfix;
-	height: 100%;
+  @include breakpoint($screen-lg) {
+    @include container(1200px);
+  }
 }

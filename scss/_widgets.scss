@@ -1,47 +1,47 @@
 .widget {
+  @include pie-clearfix;
 
-	&__title {
-		@include span(12);
-		@include margin-trailer;
-		color: #404040;
-		font-size: 1.125rem;
-		font-weight: bold;
-		height: rhythm(2);
-		line-height: rhythm(2);
-		border-bottom: 2px solid #DDD;
-		text-transform: uppercase;
-	}
-	&__item {
-		@include span(12);
-		color: #747474;
+  &__title {
+    @include span(12);
+    @include margin-trailer;
+    @include adjust-font-size-to(1.125rem, 2);
+    color: #404040;
+    font-weight: bold;
+    height: rhythm(2);
+    line-height: rhythm(2);
+    border-bottom: 2px solid #DDD;
+    text-transform: uppercase;
+  }
+  &__item {
+    @include span(12);
+    color: #747474;
 
-		h4 {
-			font-size: 0.8125rem;
-			font-weight: bold;
-		}
-	}
-	&__img {
-		@include span(3);
-		@include margin-trailer(1);
-	}
-	.fa-twitter {
-		color: $link-hover;
-		font-size: 1rem;
-	}
+    h4 {
+      @include adjust-font-size-to(0.8125rem, 1);
+      font-weight: bold;
+    }
+  }
+  &__img {
+    @include span(3);
+    @include margin-trailer;
+  }
+  .icon-twitter {
+    color: $link-hover;
+  }
 
-	@include breakpoint($screen-sm) {
-		@include span(4 nest);
+  @include breakpoint($screen-sm) {
+    @include span(4 nest);
 
-		&__title {
-			@include span(4 of 4);
-		}
+    &__title {
+      @include span(4 of 4);
+    }
 
-		&__item {
-			@include span(4 of 4);
-		}
+    &__item {
+      @include span(4 of 4);
+    }
 
-		&__img {
-			@include span(1 of 4);
-		}
-	}
+    &__img {
+      @include span(1 of 4);
+    }
+  }
 }

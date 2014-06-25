@@ -1,40 +1,43 @@
 .header {
-	height: $header-height;
-	width: 100%;
-	overflow: hidden;
-	position: fixed;
-	top: 0;
-	z-index: 9999;
-	background: rgba(255,255,255, 0.9);
+  height: $header-height;
+  width: 100%;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  z-index: 9999;
+  background: rgba(255,255,255, 0.9);
 
-	nav {
-		@include span(9 last);
-		ul {
-			@include inline-block-list(20px);
-			text-align: right;
+  nav {
+    @include span(9 last);
+    ul {
+      @include inline-block-list(20px);
+      text-align: right;
 
-				a {
-					text-decoration: none;
-					line-height: $header-height;
-					color: $header-color;
-					-webkit-transition: all .4s ease-in-out;
-					transition: all .4s ease-in-out;
+        a {
+          text-decoration: none;
+          line-height: $header-height;
+          color: $header-color;
+          transition: all .4s ease-in-out;
 
-					&:hover {
-						color: $link-hover;
-					}
-				}
-		}
-	}
+          &:hover {
+            color: $link-hover;
+          }
+        }
+    }
+  }
 }
 .logo {
-	@include span(3);
-	font-size: 1.5em;
-	line-height: $header-height;
-	text-decoration: none;
-	color: $header-color;
-	img {
-		margin-right: .5em;
-		vertical-align: middle;
-	}
+  @include span(6);
+  @include adjust-font-size-to(1.5rem);
+  line-height: $header-height;
+  text-decoration: none;
+  color: $header-color;
+  img {
+    margin-right: .5em;
+    vertical-align: middle;
+  }
+
+  @include breakpoint($screen-sm) {
+    @include span(3);
+  }
 }

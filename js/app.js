@@ -15892,193 +15892,293 @@ if ( typeof define === 'function' && define.amd ) {
 })( window );
 
 
+;(function ( $, window, document, undefined ) {
+
+    var pluginName = "keepTheRhythm",
+        defaults = {
+            baseLine: 24,
+            verticalAlignment: "center",
+            spacing: "padding"
+        };
+
+    // The actual plugin constructor
+    function Plugin( element, options ) {
+        this.element = element;
+
+        // jQuery has an extend method which merges the contents of two or
+        // more objects, storing the result in the first object. The first object
+        // is generally empty as we don't want to alter the default options for
+        // future instances of the plugin
+        this.options = $.extend( {}, defaults, options );
+
+        this._defaults = defaults;
+        this._name = pluginName;
+
+        this.init();
+    }
+
+    Plugin.prototype = {
+
+        init: function() {
+            var obj = $(this.element);
+            var rhythmPlugin = this;
+
+            $(window).resize(function () {
+                rhythmPlugin.fixRhythm(obj);
+            }).trigger("resize");
+        },
+
+        fixRhythm: function (obj) {
+            var h = obj.height();
+            var r = this.options.baseLine - (h % this.options.baseLine);
+
+            //if the element is in rhythm: do nothing.
+            if (r == this.options.baseLine) {
+                r = 0;
+            }
+
+            var top = 0;
+            var bottom = r;
+
+            if (this.options.verticalAlignment == "center") {
+                //if verticalAlignment is set to center; spread the padding to both top and bottom
+                top = r / 2;
+                bottom = r - top;
+            } else if (this.options.verticalAlignment == "bottom") {
+                //if the alignment is bottom; set to padding to the top!
+                top = r;
+                bottom = 0;
+            }
+
+            if (this.options.spacing == "margin") {
+                obj.css({
+                    marginTop: top + "px",
+                    marginBottom: bottom + "px"
+                });
+            } else {
+                obj.css({
+                    paddingTop: top + "px",
+                    paddingBottom: bottom + "px"
+                });
+            }
+        }
+    };
+
+    $.fn[pluginName] = function ( options ) {
+        return this.each(function () {
+            if (!$.data(this, "plugin_" + pluginName)) {
+                $.data(this, "plugin_" + pluginName, new Plugin( this, options ));
+            }
+        });
+    };
+
+})( jQuery, window, document );
 $(function() {
 
-	// Scroller
+  // Scroller
 
-	$('nav a[href^=#]').on('click', function(event) {
-		event.preventDefault();
-		var $elementTarget = $(this).attr('href'),
-			$destination = $($elementTarget).offset().top - headerHeight;
+  $('nav a[href^=#]').on('click', function(event) {
+    event.preventDefault();
+    var $elementTarget = $(this).attr('href'),
+      $destination = $($elementTarget).offset().top - headerHeight;
 
-		$('body, html').animate({scrollTop: $destination}, 300, 'easeInExpo');
-	});
+    $('body, html').animate({scrollTop: $destination}, 300, 'easeInExpo');
+  });
 
+  // Keep the rhythm
 
-	// Glide
+  $(window).load(function() {
+    if ( $(window).width() >= 769) {
+      $('img, iframe').keepTheRhythm({ baseline: 24 });
+    }
+    if ( $(window).width() >= 481 ) {
+      $('img, iframe').keepTheRhythm({ baseline: 21 });
+    }
+    if ( $(window).width() <=479 ) {
+      $('img, iframe').keepTheRhythm({ baseline: 18 });
+    }
+  });
 
-	var $slider = $('.slider'),
-		headerHeight = $('.header').height(),
-		sliderHeight = $(window).height() - headerHeight,
-		sliderMarginBottom = Math.ceil(sliderHeight/24)*24 - sliderHeight;
+  // Glide
 
-	$slider.css({
-		// 'margin-bottom': sliderMarginBottom,
-		'height': sliderHeight + sliderMarginBottom
-	});
+  var $slider = $('.slider'),
+    headerHeight = $('.header').height(),
+    sliderHeight = $(window).height() - headerHeight,
+    sliderMarginBottom = Math.ceil(sliderHeight/24)*24 - sliderHeight;
 
-	$(window).on('resize', function(event) {
-		var headerHeight = $('.header').height(),
-			sliderHeight = $(window).height() - headerHeight,
-			sliderMarginBottom = Math.ceil(sliderHeight/24)*24 - sliderHeight;
-		$slider.css({
-			// 'margin-bottom': sliderMarginBottom,
-			'height': sliderHeight + sliderMarginBottom
-		});
-	});
+  $slider.css({
+    // 'margin-bottom': sliderMarginBottom,
+    'height': sliderHeight + sliderMarginBottom
+  });
 
-	var $slideTitle = $('.slide-title'),
-		$slideDesc = $('.slide-desc');
+  $(window).on('resize', function(event) {
+    var headerHeight = $('.header').height(),
+      sliderHeight = $(window).height() - headerHeight,
+      sliderMarginBottom = Math.ceil(sliderHeight/24)*24 - sliderHeight;
+    $slider.css({
+      // 'margin-bottom': sliderMarginBottom,
+      'height': sliderHeight + sliderMarginBottom
+    });
+  });
 
-	$slideTitle.first().addClass('fadeInUpBig');
-	$slideDesc.first().addClass('fadeInUpBig');
+  var $slideTitle = $('.slide-title'),
+    $slideDesc = $('.slide-desc');
 
-	// Animation slide title
+  $slideTitle.first().addClass('fadeInUpBig');
+  $slideDesc.first().addClass('fadeInUpBig');
 
-	var titleEffectIn = 'fadeInUpBig',
-		titleEffectOut = 'fadeOutUpBig';
+  // Animation slide title
 
-
-	var glide = $slider.glide({
-		arrows: true,
-		arrowRightText: '<i class="fa fa-angle-right">', // fontawesome
-		arrowLeftText: '<i class="fa fa-angle-left">',
-		navigation: false,
-		autoplay: 5000,
-		circular: false,
-		beforeTransition: function() {
-			$slideTitle.eq(-this.currentSlide).removeClass( titleEffectIn ).addClass( titleEffectOut );
-			$slideDesc.eq(-this.currentSlide).removeClass( titleEffectIn ).addClass( titleEffectOut );
-
-		},
-		afterTransition: function() {
-			$slideTitle.eq(-this.currentSlide).removeClass( titleEffectOut ).addClass( titleEffectIn );
-			$slideDesc.eq(-this.currentSlide).removeClass( titleEffectOut ).addClass( titleEffectIn );
-		}
-	}).data('api_glide');
+  var titleEffectIn = 'fadeInUpBig',
+    titleEffectOut = 'fadeOutUpBig';
 
 
-	// Performance animation
+  var glide = $slider.glide({
+    arrows: true,
+    arrowRightText: '<i class="icon-angle-right">',
+    arrowLeftText: '<i class="icon-angle-left">',
+    navigation: false,
+    autoplay: 5000,
+    circular: false,
+    beforeTransition: function() {
+      $slideTitle.eq(-this.currentSlide).removeClass( titleEffectIn ).addClass( titleEffectOut );
+      $slideDesc.eq(-this.currentSlide).removeClass( titleEffectIn ).addClass( titleEffectOut );
 
-	var body = document.body,
-		timer;
-
-	$(window).on('scroll', function() {
-
-		glide.pause(); // Пауза во время скролла
-
-		var stopSlider = $('#services').offset().top;
-
-		// if (window.scrollY + headerHeight >= stopSlider) {
-		// 	glide.pause();
-		// 	console.log('слайдер остановлен!');
-		// }
-
-		clearTimeout(timer);
-
-		if(!body.classList.contains('disable-hover')) {
-			body.classList.add('disable-hover')
-		}
-
-		timer = setTimeout(function(){
-			body.classList.remove('disable-hover');
-			glide.play();
-		}, 500);
-
-	});
+    },
+    afterTransition: function() {
+      $slideTitle.eq(-this.currentSlide).removeClass( titleEffectOut ).addClass( titleEffectIn );
+      $slideDesc.eq(-this.currentSlide).removeClass( titleEffectOut ).addClass( titleEffectIn );
+    }
+  }).data('api_glide');
 
 
-	// Animation
+  // Performance animation
 
-	// $('.animation-wrapper').waypoint(function() {
-	// 	$(this).find('.animated').addClass('bounce-in');
-	// }, {
-	// 	offset: '85%'
-	// });
+  var body = document.body,
+    timer;
 
+  $(window).on('scroll', function() {
 
+    glide.pause(); // Пауза во время скролла
 
-	$( '.animation-wrapper' ).each( function(i) {
-		var $el = $( this ).find('.animated'),
-			animationClass = $el.attr( 'data-animate' );
+    var stopSlider = $('#services').offset().top;
 
-		$( this ).waypoint( function( direction ) {
-			if( direction === 'down' ) {
-				$el.addClass(animationClass);
-			}
-			else if( direction === 'up' ){
-				$el.removeClass(animationClass);
-			}
-		}, { offset: '70%' } );
+    // if (window.scrollY + headerHeight >= stopSlider) {
+    //  glide.pause();
+    //  console.log('слайдер остановлен!');
+    // }
 
-	});
+    clearTimeout(timer);
 
-	// Isotope
+    if(!body.classList.contains('disable-hover')) {
+      body.classList.add('disable-hover')
+    }
 
-	$('.portfolio').isotope({
-		animationEngine : 'best-available',
-		itemSelector : '.portfolio__thumbnail',
-		layoutMode : 'fitRows'
-	});
+    timer = setTimeout(function(){
+      body.classList.remove('disable-hover');
+      glide.play();
+    }, 500);
+
+  });
 
 
-	// Project Filtering
+  // Animation
 
-	function projectFilterInit() {
+  $('.animation-wrapper').waypoint(function() {
+    var $elements = $(this).find('.animated');
 
-		$('#filter a').on('click', function(){
-			var selector = $(this).attr('data-filter');
-			var container = $('.portfolio');
+    $elements.each(function() {
+      $(this).toggleClass( $(this).attr('data-animate') );
+    });
 
-			container.isotope({
-				filter: selector
-			});
+  }, {
+   offset: '75%' // bottom-in-view
+  });
 
-			if (!$(this).hasClass('selected') ) {
-				$(this).parents('#filter').find('.selected').removeClass('selected');
-				$(this).addClass('selected');
-			}
 
-			return false;
-		});
-	}
 
-	projectFilterInit();
+  // $( '.animation-wrapper' ).each( function(i) {
+  //   var $el = $( this ).find('.animated'),
+  //     animationClass = $el.attr( 'data-animate' );
 
-	// Portfolio
+  //   $( this ).waypoint( function( direction ) {
+  //     if( direction === 'down' ) {
+  //       $el.addClass(animationClass);
+  //     }
+  //     else if( direction === 'up' ){
+  //       $el.removeClass(animationClass);
+  //     }
+  //   }, { offset: '70%' } );
 
-	$('.portfolio__thumbnail').hover(function() {
-		$(this).find('figcaption').addClass('bounceIn');
-	}, function() {
-		$(this).find('figcaption').removeClass('bounceIn');
-	});
+  // });
 
-	// Flickr photo stream
+  // Isotope
 
-	loadPhotos();
+  $('.portfolio').isotope({
+    animationEngine : 'best-available',
+    itemSelector : '.portfolio__thumbnail',
+    layoutMode : 'fitRows'
+  });
 
-	function loadPhotos(){
 
-		var apiKey = '4b62f98647a658548e63b8727b6f57a1',
-			flickrMethod = 'flickr.interestingness.getList',
-			photoCount = '16',
-			extras = 'url_q';
+  // Project Filtering
 
-		$.ajax({
-			url:'https://www.flickr.com/services/rest/?method='+flickrMethod+
-			'&format=json&api_key='+apiKey+
-			'&extras='+extras+
-			'&per_page='+photoCount,
-			dataType: "jsonp"
-		});
-	}
+  projectFilterInit();
+
+  function projectFilterInit() {
+
+    $('#filter a').on('click', function(){
+      var selector = $(this).attr('data-filter');
+      var container = $('.portfolio');
+
+      container.isotope({
+        filter: selector
+      });
+
+      if (!$(this).hasClass('selected') ) {
+        $(this).parents('#filter').find('.selected').removeClass('selected');
+        $(this).addClass('selected');
+      }
+
+      return false;
+    });
+  }
+
+
+  // Portfolio
+
+  $('.portfolio__thumbnail').hover(function() {
+    $(this).find('figcaption').addClass('bounceIn');
+  }, function() {
+    $(this).find('figcaption').removeClass('bounceIn');
+  });
+
+  // Flickr photo stream
+
+  loadPhotos();
+
+  function loadPhotos(){
+
+    var apiKey = '4b62f98647a658548e63b8727b6f57a1',
+      flickrMethod = 'flickr.interestingness.getList',
+      photoCount = '16',
+      extras = 'url_q';
+
+    $.ajax({
+      url:'https://www.flickr.com/services/rest/?method='+flickrMethod+
+      '&format=json&api_key='+apiKey+
+      '&extras='+extras+
+      '&per_page='+photoCount,
+      dataType: "jsonp"
+    });
+  }
 
 });
 
 function jsonFlickrApi(data) {
-	$.each(data.photos.photo, function(i,photo){
-		var imageTag = $('<img>');
-		imageTag.attr('src', photo.url_q).addClass('widget__img');
-		$('.js-flickr').append(imageTag);
-	});
+  $.each(data.photos.photo, function(i,photo){
+    var imageTag = $('<img>');
+    imageTag.attr('src', photo.url_q).addClass('widget__img');
+    $('.js-flickr').append(imageTag);
+  });
 }

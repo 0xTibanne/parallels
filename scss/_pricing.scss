@@ -1,65 +1,60 @@
-.price-table {
-	@include span(full);
-	// &:nth-of-type(4),
-	// &:nth-of-type(5),
-	// &:nth-of-type(6),
-	// &:nth-of-type(7) {
-	// 	@include span(3);
-	// }
-	@include margin-trailer(2);
-	@include border-radius(5px);
-	@include box-shadow(0 2px #EEE);
-	text-align: center;
-	background: #f4f4f4;
+.pricing {
+  @include span(full);
+  @include margin-trailer(2);
+  @include border-radius(5px);
+  @include box-shadow(0 2px #EEE);
+  text-align: center;
+  background: #f4f4f4;
 
-	&__header {
+  &__header {
 
-	}
-	&__title {
-		@include adjust-font-size-to(1.25rem, 3);
-		font-weight: 300;
-		color: #5c5c5c;
-	}
-	&__tarrif {
-		@include margin-trailer;
-		height: rhythm(2);
-		border-bottom: 3px solid #17987f;
-		background: #1bbc9d;
-		p {
-			font-size: 1rem;
-			font-weight: bold;
-			color: #FFF;
-			line-height: rhythm(2);
-		}
-	}
-	&__details {
-		@include margin-trailer;
-		li {
-			@include adjust-font-size-to(1rem, 2);
-			color: #969696;
-			strong {
-				color: #5c5c5c;
-				font-weight: bold;
-			}
-		}
+  }
+  &__title {
+    @include adjust-font-size-to(1.25rem, 3);
+    font-weight: 300;
+    color: #5c5c5c;
+  }
+  &__tarrif {
+    @include margin-trailer;
+    height: rhythm(2);
+    border-bottom: 3px solid #17987f;
+    background: #1bbc9d;
+    p {
+      font-size: 1rem;
+      font-weight: bold;
+      color: #FFF;
+      line-height: rhythm(2);
+    }
+  }
 
-	}
-	&__purchase {
-		height: rhythm(3);
-	}
+  &__details {
+    @include margin-trailer;
+    li {
+      @include adjust-font-size-to(1rem, 2);
+      color: #969696;
+      strong {
+        color: #5c5c5c;
+        font-weight: bold;
+      }
+    }
 
-	//	Breakpoints
+  }
+  &__purchase {
+    height: rhythm(3);
+  }
 
-	@include breakpoint($screen-xs) {
-		@include span(6);
-	}
+  //  Breakpoints
 
-	@include breakpoint($screen-sm) {
-		@include span(4);
-	}
+  @include breakpoint($screen-xs) {
+    @include span(6);
+  }
 
-	@include breakpoint($screen-md) {
-		@include span(3);
-	}
+  @include breakpoint($screen-sm) {
+    @include span(4);
+  }
+
+  @include breakpoint($screen-md) {
+    @include span(3);
+  }
 
 }
