@@ -1,0 +1,40 @@
+.team {
+  &__item {
+    @include span(full);
+    text-align: center;
+    h3 {
+      @include margin-leader;
+      @include adjust-font-size-to(1.25rem, 1);
+      color: #2e2e2e;
+    }
+    h4 {
+      @include adjust-font-size-to(1rem, 1);
+      color: #515151;
+      @include margin-trailer;
+    }
+    p {
+      color: #818181;
+    }
+  }
+  &__photo {
+    img {
+      max-width: 100%;
+      display: block;
+      width: 100%;
+    }
+  }
+
+  //  Breakpoints
+
+  @include breakpoint($screen-xs) {
+    &__item {
+      @include span(6);
+    }
+  }
+
+  @include breakpoint($screen-sm) {
+    &__item {
+      @include span(3);
+    }
+  }
+}
