@@ -14,13 +14,13 @@ $(function() {
 
   $(window).load(function() {
     if ( $(window).width() >= 769) {
-      $('img, iframe').keepTheRhythm({ baseline: 24 });
+      $('.team__photo img, iframe').keepTheRhythm({ baseline: 24 });
     }
     if ( $(window).width() >= 481 ) {
-      $('img, iframe').keepTheRhythm({ baseline: 21 });
+      $('.team__photo img, iframe').keepTheRhythm({ baseline: 21 });
     }
     if ( $(window).width() <=479 ) {
-      $('img, iframe').keepTheRhythm({ baseline: 18 });
+      $('.team__photo img, iframe').keepTheRhythm({ baseline: 18 });
     }
   });
 
@@ -169,14 +169,6 @@ $(function() {
     });
   }
 
-
-  // Portfolio
-
-  $('.portfolio__thumbnail').hover(function() {
-    $(this).find('figcaption').addClass('bounceIn');
-  }, function() {
-    $(this).find('figcaption').removeClass('bounceIn');
-  });
 
   // Flickr photo stream
 

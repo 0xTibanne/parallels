@@ -23,7 +23,8 @@
   }
   &__img {
     @include span(3);
-    @include margin-trailer;
+    margin-top: gutter();
+    margin-bottom: gutter();
   }
   .icon-twitter {
     color: $link-hover;
@@ -42,6 +43,8 @@
 
     &__img {
       @include span(1 of 4);
+      margin-top: gutter(4);
+      margin-bottom: gutter(4);
     }
   }
 }

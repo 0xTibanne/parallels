@@ -4,7 +4,7 @@ $susy: (
   gutter-position: split,
   global-box-sizing: border-box,
   debug: (
-    image: show,
+    image: hide,
     color: rgba(#18576a, .3),
     output: background,
     toggle: top right,
@@ -12,7 +12,7 @@ $susy: (
 );
 
 .container {
-  // @include debug-vertical-alignment;
+  @include debug-vertical-alignment;
   @include container(95%);
   @include pie-clearfix;
   height: 100%;

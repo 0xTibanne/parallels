@@ -154,17 +154,24 @@ p {
 .icon-vk:before {
   content: "\f189";
 }
+.icon-tag:before {
+  content: "\f02b";
+}
+.icon-heart-o:before {
+  content: "\f08a";
+}
+.icon-comment-o:before {
+  content: "\f0e5";
+}
 
 .container {
+  background-image: -webkit-linear-gradient(bottom, rgba(74, 69, 222, 0.4) 5%, rgba(74, 69, 222, 0) 5%);
+  background-image: linear-gradient(to top, rgba(74, 69, 222, 0.4) 5%, rgba(74, 69, 222, 0) 5%);
+  background-size: 100% 1.5rem;
+  background-position: left top;
   max-width: 95%;
   margin-left: auto;
   margin-right: auto;
-  background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, 0) 10%, rgba(24, 87, 106, 0.3) 10%, rgba(38, 138, 168, 0.3) 90%, rgba(0, 0, 0, 0) 90%), -webkit-linear-gradient(top, rgba(74, 69, 222, 0.4) 5%, rgba(74, 69, 222, 0) 5%);
-  background-image: linear-gradient(to right, rgba(0, 0, 0, 0) 10%, rgba(24, 87, 106, 0.3) 10%, rgba(38, 138, 168, 0.3) 90%, rgba(0, 0, 0, 0) 90%), linear-gradient(to bottom, rgba(74, 69, 222, 0.4) 5%, rgba(74, 69, 222, 0) 5%);
-  background-size: 8.33333%, 100% 24px;
-  background-origin: content-box, border-box;
-  background-clip: content-box, border-box;
-  background-position: left top;
   *zoom: 1;
   height: 100%;
 }
@@ -183,12 +190,6 @@ p {
     max-width: 75rem;
     margin-left: auto;
     margin-right: auto;
-    background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, 0) 10%, rgba(24, 87, 106, 0.3) 10%, rgba(38, 138, 168, 0.3) 90%, rgba(0, 0, 0, 0) 90%), -webkit-linear-gradient(top, rgba(74, 69, 222, 0.4) 5%, rgba(74, 69, 222, 0) 5%);
-    background-image: linear-gradient(to right, rgba(0, 0, 0, 0) 10%, rgba(24, 87, 106, 0.3) 10%, rgba(38, 138, 168, 0.3) 90%, rgba(0, 0, 0, 0) 90%), linear-gradient(to bottom, rgba(74, 69, 222, 0.4) 5%, rgba(74, 69, 222, 0) 5%);
-    background-size: 8.33333%, 100% 24px;
-    background-origin: content-box, border-box;
-    background-clip: content-box, border-box;
-    background-position: left top;
   }
   .container:after {
     content: " ";
@@ -315,6 +316,14 @@ body {
   font-size: 0.8125rem;
   font-weight: 300;
   color: #5f5f5f;
+}
+
+.portfolio__thumbnail figcaption, .portfolio__thumbnail figcaption a {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
 }
 
 .disable-hover,
@@ -625,65 +634,101 @@ body {
 }
 
 .portfolio {
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
   overflow: hidden;
   z-index: 1;
   /* webkit fix */
+}
+.portfolio:after {
+  content: " ";
+  display: block;
+  clear: both;
 }
 .portfolio__thumbnail {
   width: 98.33333%;
   float: left;
   margin-left: 0.83333%;
   margin-right: 0.83333%;
-  margin-bottom: 1.5rem;
+  background: #2e5d5a;
+  overflow: hidden;
+  margin-top: 0.83333%;
+  margin-bottom: 0.83333%;
   position: relative;
   cursor: pointer;
+  z-index: 1;
 }
 .portfolio__thumbnail img {
   display: block;
-  max-width: 100%;
-  width: 100%;
+  width: -webkit-calc(100% + 60px);
+  width: calc(100% + 60px);
+  -webkit-transition: opacity .35s, -webkit-transform .35s;
+  transition: opacity .35s, transform .35s;
+  -webkit-transform: translate3d(-30px, 0, 0) scale(1.12);
+  transform: translate3d(-30px, 0, 0) scale(1.12);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
 }
 .portfolio__thumbnail figcaption {
-  position: absolute;
-  padding: 10px;
-  text-align: center;
-  top: 50%;
-  left: 50%;
-  width: 174px;
-  height: 174px;
-  background: rgba(0, 0, 0, 0.9);
+  padding: 2rem 1rem;
   color: #FFF;
-  margin: -87px 0 0 -87px;
-  display: none;
-  -webkit-transition: all .3s ease-in-out;
-  transition: all .3s ease-in-out;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
 }
 .portfolio__thumbnail figcaption h3 {
   font-size: 1.25rem;
-  font-weight: 400;
-  margin: 0 0 1rem 0;
+  font-weight: 300;
+  text-transform: uppercase;
+  margin: 1rem;
+  position: absolute;
+  bottom: 0;
+  right: 0;
 }
 .portfolio__thumbnail figcaption span {
-  margin-right: 15px;
+  position: relative;
 }
 .portfolio__thumbnail figcaption span i {
-  margin-right: 10px;
-  font-size: 1.25rem;
+  position: absolute;
+  right: -40px;
+  top: 50%;
+  margin-top: -7px;
   vertical-align: middle;
 }
-.portfolio__thumbnail figcaption .tag {
+.portfolio__thumbnail figcaption a {
+  z-index: 1000;
+  text-indent: 200%;
+  white-space: nowrap;
+  font-size: 0;
+  opacity: 0;
+}
+.portfolio__thumbnail figcaption p {
   font-size: 0.875rem;
   font-weight: 300;
-  margin: 0 0 1rem 0;
+  padding: 0 10px 0 0;
+  width: 50%;
+  border-right: 1px solid #fff;
+  text-align: right;
+  opacity: 0;
+  -webkit-transition: opacity .35s, -webkit-transform .35s;
+  transition: opacity .35s, transform .35s;
+  -webkit-transform: translate3d(-40px, 0, 0);
+  transform: translate3d(-40px, 0, 0);
+  white-space: pre;
 }
-.portfolio__thumbnail:hover figcaption {
-  display: block;
-  -webkit-animation-duration: .5s;
-  animation-duration: .5s;
+.portfolio__thumbnail:hover img {
+  opacity: .5;
+  -webkit-transform: translate3d(0, 0, 0) scale(1);
+  transform: translate3d(0, 0, 0) scale(1);
+}
+.portfolio__thumbnail:hover p {
+  opacity: 1;
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
 }
 @media (min-width: 480px) {
   .portfolio__thumbnail {
-    width: 48.33333%;
+    width: 98.33333%;
     float: left;
     margin-left: 0.83333%;
     margin-right: 0.83333%;
@@ -691,7 +736,7 @@ body {
 }
 @media (min-width: 768px) {
   .portfolio__thumbnail {
-    width: 31.66667%;
+    width: 48.33333%;
     float: left;
     margin-left: 0.83333%;
     margin-right: 0.83333%;
@@ -699,7 +744,7 @@ body {
 }
 @media (min-width: 992px) {
   .portfolio__thumbnail {
-    width: 23.33333%;
+    width: 31.66667%;
     float: left;
     margin-left: 0.83333%;
     margin-right: 0.83333%;
@@ -995,7 +1040,8 @@ body {
   float: left;
   margin-left: 0.83333%;
   margin-right: 0.83333%;
-  margin-bottom: 1.5rem;
+  margin-top: 0.83333%;
+  margin-bottom: 0.83333%;
 }
 .widget .icon-twitter {
   color: #b0cd3b;
@@ -1022,6 +1068,8 @@ body {
     float: left;
     margin-left: 2.5%;
     margin-right: 2.5%;
+    margin-top: 2.5%;
+    margin-bottom: 2.5%;
   }
 }
 
@@ -1068,5 +1116,3 @@ body {
     margin-right: 0;
   }
 }
-
-/*# sourceMappingURL=style.css.map */
