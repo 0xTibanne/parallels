@@ -21,7 +21,7 @@ var paths = {
   ],
   styles: [
     'vendor/animate.css/animate.css',
-    'css/style.css'
+    'scss/**/*.scss'
   ],
   images: [
     'images/**/*'
@@ -33,7 +33,7 @@ gulp.task('default', ['styles', 'scripts']);
 
 // styles
 gulp.task('styles', function() {
-  return gulp.src('scss/**/*.scss')
+  return gulp.src(paths.styles)
     .pipe(sass({ compass: true, style: 'expanded', sourcemap: true }))
     .pipe(prefix('last 3 version', 'ie 8', 'ie 9', 'Opera 12.1'))
     .pipe(gulp.dest('css/'))
