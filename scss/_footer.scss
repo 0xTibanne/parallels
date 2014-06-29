@@ -2,45 +2,16 @@
   height: $footer-height;
   background-color: #f2f2f2;
 
-  ul {
-    @include rhythm-padding(1);
-    height: $footer-height;
-    text-align: right;
+  .copyright {
+    line-height: $footer-height;
+    text-decoration: none;
+    color: $footer-color;
+    transition: all .4s ease-in-out;
+    float: right;
+    margin-right: gutter();
 
-    li {
-      @include adjust-font-size-to(1rem, 1);
-
-      a {
-        text-decoration: none;
-        color: $footer-color;
-        transition: all .4s ease-in-out;
-
-        &:hover {
-          color: $link-hover;
-        }
-        span {
-          font-weight: 300;
-        }
-      }
-    }
-  }
-
-  //  Breakpoints
-
-  @include breakpoint($screen-sm) {
-    ul {
-      @include span(9 last);
-      @include rhythm-padding(2);
-      li {
-        float: right;
-        margin-left: 40px;
-        &:first-child {
-          margin-right: 0;
-        }
-        a {
-
-        }
-      }
+    &:hover {
+      color: $link-hover;
     }
   }
 }

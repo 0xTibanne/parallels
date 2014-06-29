@@ -110,32 +110,19 @@ $(function() {
   // Animation
 
   $('.animation-wrapper').waypoint(function() {
-    var $elements = $(this).find('.animated');
+    var $animated = $(this).find('.animated');
 
-    $elements.each(function() {
-      $(this).toggleClass( $(this).attr('data-animate') );
+    $animated.each(function() {
+      $(this)
+        .toggleClass( $(this).attr('data-animate') )
+        .css({
+          'animation-delay' : $(this).attr('data-delay') + 'ms'
+        });
     });
 
   }, {
    offset: '75%' // bottom-in-view
   });
-
-
-
-  // $( '.animation-wrapper' ).each( function(i) {
-  //   var $el = $( this ).find('.animated'),
-  //     animationClass = $el.attr( 'data-animate' );
-
-  //   $( this ).waypoint( function( direction ) {
-  //     if( direction === 'down' ) {
-  //       $el.addClass(animationClass);
-  //     }
-  //     else if( direction === 'up' ){
-  //       $el.removeClass(animationClass);
-  //     }
-  //   }, { offset: '70%' } );
-
-  // });
 
   // Isotope
 

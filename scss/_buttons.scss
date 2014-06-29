@@ -19,7 +19,7 @@ $button-color-aqua: #1bbc9d !global;
   padding: 0 2em;
   color: $button-text-color;
   border: none;
-  @include transition(all .2s ease-in-out);
+  transition: background .35s, box-shadow .35s;
   @include gutters();
 }
 

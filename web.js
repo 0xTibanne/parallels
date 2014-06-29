@@ -1,0 +1,6 @@
+var express = require('express');
+var app = express();
+var path = require('/');
+app.use(express.static(path.join(process.cwd(), '/')));
+console.log(process.env.PORT || 5000);
+app.listen(process.env.PORT || 5000);
