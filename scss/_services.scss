@@ -1,7 +1,9 @@
 .services {
 
   h3 {
-    @extend %heading-2;
+    @include adjust-font-size-to(1.5rem, 2);
+    @extend %light;
+    color: #3a3a3a;
   }
   p {
     @extend %text;

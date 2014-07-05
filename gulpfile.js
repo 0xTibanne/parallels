@@ -59,7 +59,7 @@ gulp.task('scripts', function() {
 //     .pipe(gulp.dest('images/optimized/'));
 // });
 
-// Отслеживаем файлы, и по их изменению, запускаем задачу
+// watch
 gulp.watch('js/develop.js', ['scripts']);
 gulp.watch('scss/**/*.scss', ['styles']);
 // gulp.watch('src/images/**/*', ['images']);

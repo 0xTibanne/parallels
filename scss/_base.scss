@@ -14,8 +14,14 @@ $footer-color: #5C5C5C;
 
 // Text colors
 
-$text-images-color-1: #FFFFFF;
-$text-images-color-2: rgba(255,255,255,.8);
+$overlay-text-color: #FFFFFF;
+$overlay-text-color-light: rgba(255,255,255, .8);
+$section-title-color: #515151;
+
+// Background colors
+
+$background-main: #FFFFFF;
+$background-alt: #F2F2F2;
 
 // Reset
 
@@ -27,6 +33,8 @@ $footer-height: 7.5rem !global;
 // Colors
 
 $link-hover: #b0cd3b !global;
+$link-active: #b0cd3b !global;
+$link: #b0cd3b !global;
 
 // Responsive
 

@@ -5,8 +5,8 @@
     @include span(12);
     @include margin-trailer;
     @include adjust-font-size-to(1.125rem, 2);
+    @extend %strong;
     color: #404040;
-    font-weight: bold;
     height: rhythm(2);
     line-height: rhythm(2);
     border-bottom: 2px solid #DDD;
@@ -18,7 +18,7 @@
 
     h4 {
       @include adjust-font-size-to(0.8125rem, 1);
-      font-weight: bold;
+      @extend %strong;
     }
   }
   &__img {

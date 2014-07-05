@@ -11,6 +11,7 @@
 }
 
 body {
+  background: $background-main;
   font-family: $base-font-family;
   -webkit-font-smoothing: antialiased !important;
   -webkit-backface-visibility: hidden;
@@ -27,40 +28,6 @@ body {
   opacity: 0;
 }
 
-%image-title {
-  font-weight: 300;
-  color: $text-images-color-1;
-  text-shadow: 0 0 1px rgba(0,0,0,.05), 0 1px 2px rgba(0,0,0,.3);
-}
-%image-desc {
-  font-weight: 500;
-  color: $text-images-color-2;
-  text-shadow: 0 0 1px rgba(0,0,0,.05), 0 1px 2px rgba(0,0,0,.3);
-}
-%heading {
-  font-size: 2.25rem;
-  font-weight: 300;
-  color: #515151;
-}
-%heading-2 {
-  font-size: 1.5rem;
-  font-weight: 300;
-  color: #3a3a3a;
-}
-%text {
-  font-size: 0.8125rem;
-  font-weight: 300;
-  color: #5f5f5f;
-}
-
-%absolute {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-}
-
 .disable-hover,
 .disable-hover * {
   pointer-events: none !important;
@@ -70,15 +37,15 @@ body {
 // Layout
 
 .article {
-  @include clearfix;
+  @include pie-clearfix;
   padding: 1.5rem 0;
   h2 {
-    @extend %heading;
+    @extend %section-title;
     @include margin-trailer(2);
     text-align: center;
   }
   &_contacts {
-    background: #F2F2F2;
+    background: $background-alt;
   }
 }
 .headline {
@@ -86,13 +53,13 @@ body {
   height: 27rem; /* 27*15 = 432px */
   position: relative;
   h2 {
-    @extend %image-title;
+    @extend %overlay-text;
     @include margin-leader(6);
     @include margin-trailer(1);
     @include span(full);
   }
   h3 {
-    @extend %image-desc;
+    @extend %overlay-text-light;
     @include margin-trailer(1);
     @include span(full);
   }

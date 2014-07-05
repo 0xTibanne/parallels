@@ -4,8 +4,8 @@
     @include span(12 of 12);
     @include margin-trailer;
     @include adjust-font-size-to(1.125rem, 2);
+    @extend %strong;
     color: #404040;
-    font-weight: bold;
     height: rhythm(2);
     line-height: rhythm(2);
     border-bottom: 2px solid #DDD;
@@ -68,10 +68,10 @@
 
   &__title {
     @include margin-trailer;
+    @extend %strong;
     height: rhythm(2);
     color: #404040;
     font-size: 1.125rem;
-    font-weight: bold;
     line-height: rhythm(2);
     border-bottom: 2px solid #DDD;
     text-transform: uppercase;

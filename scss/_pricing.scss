@@ -11,7 +11,7 @@
   }
   &__title {
     @include adjust-font-size-to(1.25rem, 3);
-    font-weight: 300;
+    @extend %light;
     color: #5c5c5c;
   }
   &__tarrif {
@@ -20,8 +20,8 @@
     border-bottom: 3px solid #17987f;
     background: #1bbc9d;
     p {
+      @extend %strong;
       font-size: 1rem;
-      font-weight: bold;
       color: #FFF;
       line-height: rhythm(2);
     }
@@ -34,7 +34,7 @@
       color: #969696;
       strong {
         color: #5c5c5c;
-        font-weight: bold;
+        @extend %strong;
       }
     }
 
