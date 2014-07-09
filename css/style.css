@@ -129,7 +129,7 @@ blockquote .icon-lquote {
   left: -6rem;
   top: -webkit-calc(50% - 4rem);
   top: calc(50% - 4rem);
-  font-size: 4rem;
+  font-size: 2rem;
   color: #E5E5E5;
 }
 blockquote .icon-rquote {
@@ -137,7 +137,7 @@ blockquote .icon-rquote {
   right: -6rem;
   top: -webkit-calc(50% - 4rem);
   top: calc(50% - 4rem);
-  font-size: 4rem;
+  font-size: 2rem;
   color: #E5E5E5;
 }
 blockquote cite {
@@ -148,6 +148,12 @@ blockquote cite {
   font-weight: bold;
   display: block;
   color: #b0cd3b;
+}
+@media (min-width: 768px) {
+  blockquote .icon-lquote,
+  blockquote .icon-rquote {
+    font-size: 4rem;
+  }
 }
 
 .pricing__tarrif p, .pricing__details li strong, .mail__title, .more__title, .widget__title, .widget__item h4 {

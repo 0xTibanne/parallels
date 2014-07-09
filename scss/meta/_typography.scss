@@ -52,14 +52,14 @@ blockquote {
     position: absolute;
     left: -6rem;
     top: calc(50% - 4rem);
-    font-size: 4rem;
+    font-size: 2rem;
     color: #E5E5E5;
   }
   .icon-rquote {
     position: absolute;
     right: -6rem;
     top: calc(50% - 4rem);
-    font-size: 4rem;
+    font-size: 2rem;
     color: #E5E5E5;
   }
 
@@ -72,6 +72,12 @@ blockquote {
     color: #b0cd3b;
   }
 
+  @include breakpoint($screen-sm) {
+    .icon-lquote,
+    .icon-rquote {
+      font-size: 4rem;
+    }
+  }
 }
 
 // Type weights
