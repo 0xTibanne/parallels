@@ -48,18 +48,20 @@ blockquote {
   width: 60%;
   margin-left: auto;
   margin-right: auto;
+  .icon-lquote,
+  .icon-rquote {
+    font-size: 2rem;
+  }
   .icon-lquote {
     position: absolute;
-    left: -6rem;
+    left: -3rem;
     top: calc(50% - 4rem);
-    font-size: 2rem;
     color: #E5E5E5;
   }
   .icon-rquote {
     position: absolute;
-    right: -6rem;
+    right: -3rem;
     top: calc(50% - 4rem);
-    font-size: 2rem;
     color: #E5E5E5;
   }
 
@@ -76,6 +78,12 @@ blockquote {
     .icon-lquote,
     .icon-rquote {
       font-size: 4rem;
+    }
+    .icon-lquote {
+      left: -6rem;
+    }
+    .icon-rquote {
+      right: -6rem;
     }
   }
 }

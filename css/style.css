@@ -124,20 +124,22 @@ blockquote {
   margin-left: auto;
   margin-right: auto;
 }
+blockquote .icon-lquote,
+blockquote .icon-rquote {
+  font-size: 2rem;
+}
 blockquote .icon-lquote {
   position: absolute;
-  left: -6rem;
+  left: -3rem;
   top: -webkit-calc(50% - 4rem);
   top: calc(50% - 4rem);
-  font-size: 2rem;
   color: #E5E5E5;
 }
 blockquote .icon-rquote {
   position: absolute;
-  right: -6rem;
+  right: -3rem;
   top: -webkit-calc(50% - 4rem);
   top: calc(50% - 4rem);
-  font-size: 2rem;
   color: #E5E5E5;
 }
 blockquote cite {
@@ -153,6 +155,12 @@ blockquote cite {
   blockquote .icon-lquote,
   blockquote .icon-rquote {
     font-size: 4rem;
+  }
+  blockquote .icon-lquote {
+    left: -6rem;
+  }
+  blockquote .icon-rquote {
+    right: -6rem;
   }
 }
 
@@ -981,7 +989,7 @@ body {
   width: 100%;
 }
 .team__chart {
-  width: 23.33333%;
+  width: 98.33333%;
   float: left;
   margin-left: 0.83333%;
   margin-right: 0.83333%;
@@ -996,6 +1004,15 @@ body {
   .team__item:nth-of-type(3) {
     clear: both;
   }
+  .team__chart {
+    width: 48.33333%;
+    float: left;
+    margin-left: 0.83333%;
+    margin-right: 0.83333%;
+  }
+  .team__chart:nth-of-type(3) {
+    clear: both;
+  }
 }
 @media (min-width: 768px) {
   .team__item {
@@ -1005,6 +1022,15 @@ body {
     margin-right: 0.83333%;
   }
   .team__item:nth-of-type(3) {
+    clear: none;
+  }
+  .team__chart {
+    width: 23.33333%;
+    float: left;
+    margin-left: 0.83333%;
+    margin-right: 0.83333%;
+  }
+  .team__chart:nth-of-type(3) {
     clear: none;
   }
 }
