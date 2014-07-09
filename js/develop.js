@@ -2,12 +2,19 @@ $(function() {
 
   // Scroller
 
-  $('nav a[href^=#]').on('click', function(event) {
+  $('nav ul a[href^=#]').on('click', function(event) {
     event.preventDefault();
     var $elementTarget = $(this).attr('href'),
       $destination = $($elementTarget).offset().top - headerHeight;
 
     $('body, html').animate({scrollTop: $destination}, 300, 'easeInExpo');
+  });
+
+  // Collapse menu
+
+  $('.menu__toggle').on('click', function(e) {
+    e.preventDefault();
+    $('.menu ul').toggleClass('collapsed');
   });
 
   // Keep the rhythm
@@ -33,21 +40,24 @@ $(function() {
 
   $slider.css({
     // 'margin-bottom': sliderMarginBottom,
-    'height': sliderHeight + sliderMarginBottom
+    'height' : sliderHeight + sliderMarginBottom,
+    'margin-top' : headerHeight
   });
 
   $(window).on('resize', function(event) {
     var headerHeight = $('.header').height(),
-      sliderHeight = $(window).height() - headerHeight,
-      sliderMarginBottom = Math.ceil(sliderHeight/24)*24 - sliderHeight;
+        sliderHeight = $(window).height() - headerHeight,
+        sliderMarginBottom = Math.ceil(sliderHeight/24)*24 - sliderHeight;
+
     $slider.css({
       // 'margin-bottom': sliderMarginBottom,
-      'height': sliderHeight + sliderMarginBottom
+      'height': sliderHeight + sliderMarginBottom,
+      'margin-top' : headerHeight
     });
   });
 
   var $slideTitle = $('.slide-title'),
-    $slideDesc = $('.slide-desc');
+      $slideDesc = $('.slide-desc');
 
   $slideTitle.first().addClass('fadeInUpBig');
   $slideDesc.first().addClass('fadeInUpBig');
@@ -55,7 +65,7 @@ $(function() {
   // Animation slide title
 
   var titleEffectIn = 'fadeInUpBig',
-    titleEffectOut = 'fadeOutUpBig';
+      titleEffectOut = 'fadeOutUpBig';
 
 
   var glide = $slider.glide({
@@ -80,7 +90,7 @@ $(function() {
   // Performance animation
 
   var body = document.body,
-    timer;
+      timer;
 
   $(window).on('scroll', function() {
 
@@ -147,6 +157,17 @@ $(function() {
         filter: selector
       });
 
+      // container.isotope( 'on', 'layoutComplete', function( isoInstance, laidOutItems ) {
+      //   var $thumb = $('.portfolio__thumbnail');
+      //   if (laidOutItems.length % 2 !==0 ) {
+      //     console.log('single add ' + laidOutItems.length);
+      //     $thumb.filter(':last').addClass('single');
+      //   } else if ($thumb.filter(':visible').length % 2 == 0) {
+      //     $('.single').removeClass('single');
+      //     console.log('single remove ' + laidOutItems.length);
+      //   }
+      // } );
+
       if (!$(this).hasClass('selected') ) {
         $(this).parents('#filter').find('.selected').removeClass('selected');
         $(this).addClass('selected');
@@ -156,6 +177,28 @@ $(function() {
     });
   }
 
+  // Price tables
+
+  // function setEqualHeight(columns) {
+  //   var tallestcolumn = 0;
+  //   columns.each(function() {
+  //     currentHeight = $(this).height();
+  //     if(currentHeight > tallestcolumn) {
+  //       tallestcolumn  = currentHeight;
+  //     }
+  //   });
+  //   columns.height(tallestcolumn);
+  // }
+  // $(window).resize( setEqualHeight($(".pricing__details")) );
+  // $(window).load( setEqualHeight($(".pricing__details")) );
+
+  $('.team__chart').easyPieChart({
+      lineCap: 'butt',
+      size: 145,
+      lineWidth: 25,
+      barColor: '#00C083',
+      trackColor: '#E5E5E5'
+  });
 
   // Flickr photo stream
 

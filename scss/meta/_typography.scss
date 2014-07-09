@@ -39,6 +39,41 @@ p {
   @include margin-trailer;
 }
 
+blockquote {
+  @include adjust-font-size-to(0.8125rem, 1);
+  @include margin-trailer;
+  color: #717171;
+  text-align: center;
+  position: relative;
+  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+  .icon-lquote {
+    position: absolute;
+    left: -6rem;
+    top: calc(50% - 4rem);
+    font-size: 4rem;
+    color: #E5E5E5;
+  }
+  .icon-rquote {
+    position: absolute;
+    right: -6rem;
+    top: calc(50% - 4rem);
+    font-size: 4rem;
+    color: #E5E5E5;
+  }
+
+  cite {
+    @include adjust-font-size-to(0.8125rem, 1);
+    @include margin-leader;
+    text-transform: uppercase;
+    font-weight: bold;
+    display: block;
+    color: #b0cd3b;
+  }
+
+}
+
 // Type weights
 
 %ultrastrong {
@@ -46,6 +81,9 @@ p {
 }
 %strong {
   font-weight: 700;
+}
+%medium {
+  font-weight: 500;
 }
 %regular {
   font-weight: 400;
@@ -64,11 +102,6 @@ p {
 %overlay-text-light {
   color: $overlay-text-color-light;
   text-shadow: 0 0 1px rgba(0,0,0,.05), 0 1px 2px rgba(0,0,0,.3);
-}
-%section-title {
-  font-size: 2.25rem;
-  font-weight: 300;
-  color: $section-title-color;
 }
 
 %text {

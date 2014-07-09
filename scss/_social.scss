@@ -5,17 +5,38 @@
     width: 46px;
     font-size: 1.25rem;
     text-align: center;
+    text-decoration: none;
     line-height: 46px;
     color: #333;
     margin-right: 30px;
-    border-radius: 23px;
-    border: 5px solid rgba(255,255,255, 0.0);
+    border-radius: 50%;
     background: #fff;
     transition: all .3s ease-in-out;
+    position: relative;
     float: left;
+    z-index: 10;
     &:hover {
-      border: 5px solid #FFF;
       background: #b0cd3b;
+      &:after {
+        transform: scale(1.1);
+        opacity: 1;
+      }
+    }
+
+    &:after {
+      background: transparent;
+      border-radius: 50%;
+      border: 3px solid #FFF;
+      content: "";
+      display: block;
+      height: 40px;
+      width: 40px;
+      left: 0;
+      top: 0;
+      opacity: 0;
+      position: absolute;
+      transition: all .25s linear;
+      z-index: 1;
     }
   }
 }

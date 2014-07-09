@@ -1,35 +1,101 @@
 .header {
-  height: $header-height;
+  height: rhythm(3);
   width: 100%;
-  overflow: hidden;
+  // overflow: hidden;
   position: fixed;
   top: 0;
   z-index: 9999;
   background: rgba(255,255,255, 0.9);
 
-  nav {
+  @include breakpoint($screen-sm) {
+    height: rhythm(5);
+  }
+}
+
+.menu {
+  @include pie-clearfix;
+  .collapsed {
+    display: none;
+  }
+  ul {
+    background: rgba(255,255,255, 0.9);
+    position: absolute;
+    top: rhythm(3);
+    left: 0;
+    right: 0;
+    transition: top .4s ease-in-out;
+  }
+
+  &__item {
+    display: block;
+    vertical-align: middle;
+    white-space: nowrap;
+    border-top: 1px solid #DDD;
+    a {
+      text-decoration: none;
+      line-height: rhythm(2);
+      color: $header-color;
+      display: block;
+      padding: 0 1rem;
+      transition: all .4s ease-in-out;
+
+      &:hover {
+        color: $link-hover;
+      }
+    }
+  }
+
+  &__toggle {
+    display: block;
+    @include span(1);
+    @include adjust-font-size-to(2rem, 3);
+    text-decoration: none;
+    text-align: center;
+    color: #717171;
+    transition: all .4s ease-in-out;
+
+    &:hover {
+      color: $link-hover;
+    }
+
+  }
+
+  //  Breakpoint
+
+  @include breakpoint($screen-sm) {
     @include span(9 last);
+    text-align: right;
+
+    .collapsed {
+      display: block;
+    }
+
     ul {
-      @include inline-block-list(20px);
-      text-align: right;
+      display: block;
+      background: transparent;
+      position: static;
+    }
 
-        a {
-          text-decoration: none;
-          line-height: $header-height;
-          color: $header-color;
-          transition: all .4s ease-in-out;
+    &__item {
+      padding-left: 20px;
+      display: inline-block;
+      border: none;
+      a {
+        line-height: rhythm(5);
+        padding: 0;
+      }
+    }
 
-          &:hover {
-            color: $link-hover;
-          }
-        }
+    &__toggle {
+      display: none;
     }
   }
 }
+
 .logo {
-  @include span(6);
+  @include span(11);
   @include adjust-font-size-to(1.5rem);
-  line-height: $header-height;
+  line-height: rhythm(3);
   text-decoration: none;
   color: $header-color;
   img {
@@ -37,7 +103,10 @@
     vertical-align: middle;
   }
 
+  // Breakpoint
+
   @include breakpoint($screen-sm) {
     @include span(3);
+    line-height: rhythm(5);
   }
 }

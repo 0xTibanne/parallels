@@ -16,6 +16,7 @@ var paths = {
     'vendor/jquery-waypoints/waypoints.js',
     'vendor/glidejs/dist/jquery.glide.js',
     'vendor/isotope/dist/isotope.pkgd.js',
+    'vendor/jquery.easy-pie-chart/dist/jquery.easypiechart.js',
     'vendor/jquery-keep-the-rhythm/jquery.keeptherhythm.js',
     'js/develop.js'
   ],

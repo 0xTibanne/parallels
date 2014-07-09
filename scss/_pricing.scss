@@ -1,4 +1,5 @@
 .pricing {
+  @include pie-clearfix;
   @include span(full);
   @include margin-trailer(2);
   @include border-radius(5px);
@@ -30,7 +31,9 @@
   &__details {
     @include margin-trailer;
     li {
-      @include adjust-font-size-to(1rem, 2);
+      @include adjust-font-size-to(0.825rem, 1);
+      @include margin-trailer();
+      padding: 0 1rem;
       color: #969696;
       strong {
         color: #5c5c5c;
@@ -50,7 +53,7 @@
   }
 
   @include breakpoint($screen-sm) {
-    @include span(4);
+    @include span(3);
   }
 
   @include breakpoint($screen-md) {

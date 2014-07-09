@@ -42,12 +42,20 @@
   @include breakpoint($screen-xs) {
     &__item {
       @include span(6);
+
+      &:nth-of-type(3) {
+        @include break;
+      }
     }
   }
 
   @include breakpoint($screen-sm) {
     &__item {
       @include span(3);
+
+      &:nth-of-type(3) {
+        @include nobreak;
+      }
     }
   }
 

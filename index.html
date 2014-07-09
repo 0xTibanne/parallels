@@ -2,26 +2,27 @@
 <html lang="ru">
 <head>
   <meta charset="UTF-8">
-  <meta name=viewport content="width=device-width, initial-scale=1">
+  <meta name=viewport content="width=device-width, initial-scale=1, maximum-scale=1">
   <title>Parallels - One-page Responsive</title>
-  <link rel="stylesheet" href="css/style.min.css">
-  <link rel="stylesheet" href="css/animate.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="vendor/animate.css/animate.min.css">
   <link href='http://fonts.googleapis.com/css?family=Roboto:400,300,500,700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
 </head>
 <body>
 
   <header class="header" role="banner">
     <div class="container">
-      <a href="" class="logo"><img src="images/logo.png" alt="Parallels">Parallels</a>
-      <nav role="navigation">
-        <ul>
-          <li><a href="#slider">Главная</a></li>
-          <li><a href="#services">Услуги</a></li>
-          <li><a href="#portfolio">Портфолио</a></li>
-          <li><a href="#pricing">Цены</a></li>
-          <li><a href="#about">О нас</a></li>
-          <li><a href="#contact">Контакты</a></li>
+      <a href="/" class="logo"><img src="images/logo.png" alt="Parallels">Parallels</a>
+      <nav class="menu" role="navigation">
+        <ul class="collapsed">
+          <li class="menu__item"><a href="#slider">Главная</a></li>
+          <li class="menu__item"><a href="#services">Услуги</a></li>
+          <li class="menu__item"><a href="#portfolio">Портфолио</a></li>
+          <li class="menu__item"><a href="#pricing">Цены</a></li>
+          <li class="menu__item"><a href="#about">О нас</a></li>
+          <li class="menu__item"><a href="#contact">Контакты</a></li>
         </ul>
+        <a href="#" class="menu__toggle"><i class="icon-bars"></i></a>
 
       </nav>
     </div>
@@ -52,7 +53,7 @@
 
   <section id="services" class="article animation-wrapper">
     <div class="container">
-      <h2>Мы делаем</h2>
+      <h2 class="article__title">Мы делаем</h2>
       <div class="services">
         <div class="services__item">
           <span class="services__icon animated" data-delay="100" data-animate="bounceIn"></span>
@@ -92,7 +93,7 @@
 
   <section id="portfolio" class="article">
     <div class="container">
-      <h2>Последние работы</h2>
+      <h2 class="article__title">Последние работы</h2>
 
       <div id="filter" class="filter">
         <a href="#" class="selected" data-filter="*" >Все</a>
@@ -199,6 +200,18 @@
             <a href="#"></a>
           </figcaption>
         </figure>
+        <figure data-delay="1600" data-animate="puffIn" class="portfolio__thumbnail photo">
+          <img src="images/portfolio/work-9.jpg" alt="">
+          <figcaption>
+            <h3>Project name</h3>
+            <p>
+              <span>Фотография<i class="icon-tag"></i></span>
+              <span>34 <i class="icon-comment-o"></i></span>
+              <span>201 <i class="icon-heart-o"></i></span>
+            </p>
+            <a href="#"></a>
+          </figcaption>
+        </figure>
       </div>
     </div>
   </section>
@@ -212,7 +225,7 @@
 
   <section id="pricing" class="article">
     <div class="container">
-      <h2>Наши тарифы</h2>
+      <h2 class="article__title">Наши тарифы</h2>
 
         <div class="pricing">
           <header class="pricing__header">
@@ -244,11 +257,17 @@
             <p>59 900 <sup>руб</sup></p>
           </section>
           <ul class="pricing__details">
-            <li><strong>5x</strong> option1</li>
-            <li><strong>Free</strong> option2</li>
-            <li><strong>Unlimited</strong> option3</li>
-            <li><strong>Unlimited</strong> option4</li>
-            <li><strong>5x</strong> option5</li>
+            <li><strong>Брифинг</strong></li>
+            <li><strong>Анализ</strong> ниши</li>
+            <li><strong>Копирайтинг</strong> (продающие тексты)</li>
+            <li>Разработка <strong>прототипа</strong></li>
+            <li><strong>Продающие</strong> триггеры</li>
+            <li>Разработка <strong>логотипа</strong></li>
+            <li>Уникальный <strong>дизайн</strong></li>
+            <li>Верстка и <strong>программирование</strong></li>
+            <li>Установка <strong>Яндекс Метрики</strong> и <strong>Google Analitycs</strong> и настройка целей</li>
+            <li>Установка и настройка колтрекинга (calltracking)</li>
+            <li>Настройка рекламы и ведение компании в Яндекс Директ</li>
           </ul>
           <section class="pricing__purchase">
             <button class="button-3d button-3d_green">Заказать</button>
@@ -259,14 +278,24 @@
             <h3 class="pricing__title">Бизнес</h3>
           </header>
           <section class="pricing__tarrif">
-            <p>235$/month</p>
+            <p>89 900 <sup>руб</sup></p>
           </section>
           <ul class="pricing__details">
-            <li><strong>10x</strong> option1</li>
-            <li><strong>Free</strong> option2</li>
-            <li><strong>Unlimited</strong> option3</li>
-            <li><strong>Unlimited</strong> option4</li>
-            <li><strong>10x</strong> option5</li>
+            <li><strong>Брифинг</strong></li>
+            <li><strong>Анализ</strong> ниши</li>
+            <li><strong>Копирайтинг</strong> (продающие тексты)</li>
+            <li>Разработка <strong>прототипа</strong></li>
+            <li><strong>Продающие</strong> триггеры</li>
+            <li>Разработка <strong>логотипа</strong></li>
+            <li>Уникальный <strong>дизайн</strong></li>
+            <li>Верстка и <strong>программирование</strong></li>
+            <li>Установка <strong>Яндекс Метрики</strong> и <strong>Google Analitycs</strong> и настройка целей</li>
+            <li>Установка и настройка колтрекинга (calltracking)</li>
+            <li>Настройка рекламы и ведение компании в Яндекс Директ</li>
+            <li>Настройка рекламы и ведение компании в Google AdWords</li>
+            <li>Почтовый ящик@ваш-домен.ru</li>
+            <li>A/B тестирование</li>
+            <li>Тех.поддержка 1 месяц</li>
           </ul>
           <section class="pricing__purchase">
             <button class="button-3d button-3d_green">Заказать</button>
@@ -277,33 +306,52 @@
             <h3 class="pricing__title">Премиум</h3>
           </header>
           <section class="pricing__tarrif">
-            <p>235$/month</p>
+            <p>159 900 <sup>руб</sup></p>
           </section>
           <ul class="pricing__details">
-            <li><strong>10x</strong> option1</li>
-            <li><strong>Free</strong> option2</li>
-            <li><strong>Unlimited</strong> option3</li>
-            <li><strong>Unlimited</strong> option4</li>
-            <li><strong>10x</strong> option5</li>
+            <li><strong>Брифинг</strong></li>
+            <li><strong>Анализ</strong> ниши</li>
+            <li><strong>Копирайтинг</strong> (продающие тексты)</li>
+            <li>Разработка <strong>прототипа</strong></li>
+            <li><strong>Продающие</strong> триггеры</li>
+            <li>Разработка <strong>логотипа</strong></li>
+            <li>Уникальный <strong>дизайн</strong></li>
+            <li>Верстка и <strong>программирование</strong></li>
+            <li>Установка <strong>Яндекс Метрики</strong> и <strong>Google Analitycs</strong> и настройка целей</li>
+            <li>Установка и настройка колтрекинга (calltracking)</li>
+            <li>Настройка рекламы и ведение компании в Яндекс Директ</li>
+            <li>Настройка рекламы и ведение компании в Google AdWords</li>
+            <li>Почтовый ящик@ваш-домен.ru</li>
+            <li>A/B тестирование</li>
+            <li>Тех.поддержка <strong>2 месяца</strong></li>
+            <li>Интеграция с CRM</li>
           </ul>
           <section class="pricing__purchase">
             <button class="button-3d button-3d_green">Заказать</button>
           </section>
         </div>
 
+        <h3 class="article__subtitle"><span>Клиенты о наc</span></h3>
+        <blockquote>
+          <i class="icon-lquote"></i>
+          Donec leo elit, dignissim eu elit vitae, aliquam tincidunt purus. Proin id risus ut sem vehicula faucibus. Fusce sed libero nec quam tempus facilisis. Vestibulum venenatis nisl ac feugiat aliquet. Sed euismod ligula arcu, et mollis est volutpat et. Aenean sed nulla placerat neque lacinia ullamcorper.
+          <cite># Perry Maliton</cite>
+          <i class="icon-rquote"></i>
+        </blockquote>
+
     </div>
   </section>
 
   <section class="headline headline_about">
     <div class="container">
-      <h2>Мы - команда!</h2>
+      <h2 >Мы - команда!</h2>
       <h3>Каждый из нас профессионал своего дела</h3>
     </div>
   </section>
 
   <section class="article" id="about">
     <div class="container">
-      <h2>О нас</h2>
+      <h2 class="article__title">О нас</h2>
       <div class="team">
         <div class="team__item">
           <div class="team__photo"><img src="images/team/member1.jpg" alt="Parallels Team"></div>
@@ -330,6 +378,12 @@
           <p>Accusamus, sapiente, voluptatem ipsa atque quasi facere assumenda earum possimus placeat harum quaerat adipisci tenetur nostrum aperiam vitae laborum mollitia debitis aliquid!</p>
           </div>
       </div>
+
+      <h3 class="article__subtitle"><span>Наши скиллы</span></h3>
+      <div class="team__chart" data-percent="35">35%</div>
+      <div class="team__chart" data-percent="85">85%</div>
+      <div class="team__chart" data-percent="95">95%</div>
+      <div class="team__chart" data-percent="45">45%</div>
     </div>
   </section>
 
@@ -337,7 +391,7 @@
 
   <section class="article article_contacts" id="contact">
     <div class="container">
-      <h2>Напишите нам</h2>
+      <h2 class="article__title">Напишите нам</h2>
       <div class="mail">
         <h3 class="mail__title">Почта</h3>
         <form action="/">
@@ -382,11 +436,11 @@
       <div class="widget">
         <h3 class="widget__title">Последние твитты</h3>
         <div class="widget__item">
-          <h4><span class="icon-twitter"></span> booty, 15.10.2013</h4>
+          <h4><span class="icon-twitter"> </span> booty, 15.10.2013</h4>
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio, repellendus veniam aspernatur consectetur autem architecto ducimus possimus quo amet.</p>
         </div>
         <div class="widget__item">
-          <h4><span class="icon-twitter"></span> booty, 09.10.2013</h4>
+          <h4><span class="icon-twitter"> </span> booty, 09.10.2013</h4>
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis quidem earum reprehenderit corporis deserunt!</p>
         </div>
       </div>

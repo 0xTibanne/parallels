@@ -54,5 +54,14 @@
   &-comment-o:before {
     content: "\f0e5";
   }
+  &-lquote:before {
+    content: "\e601";
+  }
+  &-rquote:before {
+    content: "\e600";
+  }
+  &-bars:before {
+    content: "\f0c9";
+  }
 
 }

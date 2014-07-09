@@ -19,5 +19,8 @@
     "jquery-placeholder": "~2.0.8",
     "jquery-waypoints": "~2.0.5",
     "modernizr": "~2.8.2"
+  },
+  "devDependencies": {
+    "jquery.easy-pie-chart": "~2.1.4"
   }
 }
