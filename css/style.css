@@ -1017,12 +1017,11 @@ body {
   float: left;
   margin-left: 0.83333%;
   margin-right: 0.83333%;
-  margin-bottom: 1.5rem;
+  margin-bottom: 3rem;
   text-align: center;
   text-transform: uppercase;
   color: #424242;
-  padding-top: -webkit-calc(100px + 1.5rem);
-  padding-top: calc(100px + 1.5rem);
+  padding-top: 124px;
   position: relative;
 }
 .chart__item {
@@ -1036,16 +1035,16 @@ body {
   position: absolute;
   clip: rect(0, 200px, 100px, 0);
   top: 0;
-  left: -webkit-calc(50% - 100px);
-  left: calc(50% - 100px);
+  left: 50%;
+  margin-left: -100px;
 }
 .chart__progress {
   position: absolute;
   border-radius: 50%;
-  left: -webkit-calc(50% - 100px);
-  left: calc(50% - 100px);
-  top: -webkit-calc(50% - 100px);
-  top: calc(50% - 100px);
+  left: 50%;
+  margin-left: -100px;
+  top: 50%;
+  margin-top: -100px;
   width: 200px;
   height: 200px;
   clip: rect(0, 200px, 100px, 0);
@@ -1053,10 +1052,10 @@ body {
 .chart__fill {
   position: absolute;
   border-radius: 50%;
-  left: -webkit-calc(50% - 100px);
-  left: calc(50% - 100px);
-  top: -webkit-calc(50% - 100px);
-  top: calc(50% - 100px);
+  left: 50%;
+  margin-left: -100px;
+  top: 50%;
+  margin-top: -100px;
   width: 200px;
   height: 200px;
   -webkit-transition: all 2s ease-in;
@@ -1068,13 +1067,12 @@ body {
 .chart__percents {
   position: absolute;
   border-radius: 50%;
-  left: -webkit-calc(50% - 133.33333px/2);
-  left: calc(50% - 133.33333px/2);
-  top: -webkit-calc(50% - 133.33333px/2);
-  top: calc(50% - 133.33333px/2);
+  left: 50%;
+  margin-left: -66.66667px;
+  top: 50%;
+  margin-top: -66.66667px;
   width: 133.33333px;
   height: 133.33333px;
-  clip: rect(0, 133.33333px, 66.66667px, 0);
   background: #fff;
   text-align: center;
   display: table;

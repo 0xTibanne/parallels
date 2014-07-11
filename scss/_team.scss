@@ -55,8 +55,10 @@ $size: 200px;
 @mixin circle($size) {
   position: absolute;
   border-radius: 50%;
-  left: calc(50% - #{$size/2});
-  top: calc(50% - #{$size/2});
+  left: 50%;
+  margin-left: -#{$size/2};
+  top: 50%;
+  margin-top: -#{$size/2};
   width: $size;
   height: $size;
 }
@@ -69,7 +71,7 @@ $size: 200px;
   text-align: center;
   text-transform: uppercase;
   color: #424242;
-  padding-top: calc(#{$size/2} + 1.5rem);
+  padding-top: 124px;
   position: relative;
 
   &__item {
@@ -83,7 +85,8 @@ $size: 200px;
     position: absolute;
     clip: rect(0, $size, #{$size/2}, 0);
     top: 0;
-    left: calc(50% - #{$size/2});
+    left: 50%;
+    margin-left: -#{$size/2};
   }
 
   &__progress {
@@ -99,7 +102,7 @@ $size: 200px;
   }
 
   &__percents {
-    @include circle(#{$size/1.5});
+    @include circle($size/1.5);
     background: #fff;
     text-align: center;
     display: table;
