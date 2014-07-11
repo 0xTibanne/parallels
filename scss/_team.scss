@@ -129,7 +129,7 @@ $size: 200px;
 
   }
 
-  @include breakpoint($screen-sm) {
+  @include breakpoint($screen-md) {
 
       @include span(3);
 

@@ -14,6 +14,7 @@
   &__input {
     @include span(12 of 12);
     @include margin-trailer(1);
+    @include appearance(none);
     font-size: 0.875rem;
     height: rhythm(2);
     padding: 0 10px;
@@ -22,6 +23,7 @@
   }
   &__textarea {
     @include span(12 of 12);
+    @include appearance(none);
     height: rhythm(8);
     font-family: $base-font-family;
     padding: 10px;
@@ -34,6 +36,7 @@
   }
   &__submit {
     @include rhythm-margins(1);
+    @include appearance(none);
   }
 
 
