@@ -65,7 +65,7 @@ $size: 200px;
 
 .chart {
   @include span(12);
-  @include margin-trailer;
+  @include margin-trailer(2);
   text-align: center;
   text-transform: uppercase;
   color: #424242;
@@ -100,10 +100,9 @@ $size: 200px;
 
   &__percents {
     @include circle(#{$size/1.5});
-    clip: rect(0, $size/1.5, #{$size/1.5/2}, 0);
-     background: #fff;
-     text-align: center;
-     display: table;
+    background: #fff;
+    text-align: center;
+    display: table;
     span {
       margin-top: 30px;
       display: block;
