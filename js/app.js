@@ -16525,12 +16525,20 @@ $(function() {
   // $(window).resize( setEqualHeight($(".pricing__details")) );
   // $(window).load( setEqualHeight($(".pricing__details")) );
 
-  $('.team__chart').easyPieChart({
-      lineCap: 'butt',
-      size: 145,
-      lineWidth: 25,
-      barColor: '#00C083',
-      trackColor: '#E5E5E5'
+  $('.chart-wrapper').waypoint(function() {
+
+    var $chart = $('.chart');
+
+    $chart.each(function() {
+      var percent = parseInt($(this).data('percent')),
+          deg = 180*percent/100;
+
+      $('.chart__fill', this).css('transform','rotate('+ deg +'deg)');
+      $('.chart__percents span', this).html(percent+'%');
+    });
+
+  }, {
+   offset: '75%' // bottom-in-view
   });
 
   // Flickr photo stream

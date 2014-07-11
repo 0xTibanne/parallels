@@ -40,10 +40,11 @@
   //  Breakpoints
 
   @include breakpoint($screen-xs) {
+
     &__item {
       @include span(6);
 
-      &:nth-of-type(3) {
+      &:nth-of-type(2n + 1) {
         @include break;
       }
     }
@@ -53,7 +54,7 @@
     &__item {
       @include span(3);
 
-      &:nth-of-type(3) {
+      &:nth-of-type(2n + 1) {
         @include nobreak;
       }
     }

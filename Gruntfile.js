@@ -93,7 +93,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-newer');
 
-  grunt.registerTask('styles', ['sass', 'autoprefixer']);
+  grunt.registerTask('styles', ['sass', 'autoprefixer', 'cssmin']);
   grunt.registerTask('scripts', ['concat', 'uglify']);
   grunt.registerTask('default', ['sass', 'autoprefixer', 'cssmin', 'concat', 'uglify', 'watch']);
 };

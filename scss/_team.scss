@@ -1,6 +1,7 @@
 .team {
   &__item {
     @include span(12);
+    @include margin-trailer;
     text-align: center;
     h3 {
       @include margin-leader;
@@ -23,9 +24,6 @@
       width: 100%;
     }
   }
-  &__chart {
-    @include span(12);
-  }
 
   //  Breakpoints
 
@@ -34,14 +32,7 @@
     &__item {
       @include span(6);
 
-      &:nth-of-type(3) {
-        @include break;
-      }
-    }
-
-    &__chart {
-      @include span(6);
-      &:nth-of-type(3) {
+      &:nth-of-type(2n + 1) {
         @include break;
       }
     }
@@ -53,18 +44,98 @@
     &__item {
       @include span(3);
 
-      &:nth-of-type(3) {
+      &:nth-of-type(2n + 1) {
         @include nobreak;
       }
     }
+  }
+}
 
-    &__chart {
+$size: 200px;
+@mixin circle($size) {
+  position: absolute;
+  border-radius: 50%;
+  left: calc(50% - #{$size/2});
+  top: calc(50% - #{$size/2});
+  width: $size;
+  height: $size;
+}
+
+
+
+.chart {
+  @include span(12);
+  @include margin-trailer;
+  text-align: center;
+  text-transform: uppercase;
+  color: #424242;
+  padding-top: calc(#{$size/2} + 1.5rem);
+  position: relative;
+
+  &__item {
+    @include margin-trailer;
+    margin: 0 auto;
+    width: $size;
+    height: $size;
+    overflow: hidden;
+    border-radius: 100px 100px 0 0;
+    background-color: #E5E5E5;
+    position: absolute;
+    clip: rect(0, $size, #{$size/2}, 0);
+    top: 0;
+    left: calc(50% - #{$size/2});
+  }
+
+  &__progress {
+    @include circle($size);
+    clip: rect(0, $size, #{$size/2}, 0);
+  }
+
+  &__fill {
+    @include circle($size);
+    transition: all 2s ease-in;
+    clip: rect(#{$size/2}, $size, $size, 0);
+    background: linear-gradient(to right,  #52C73B, #00C085);
+  }
+
+  &__percents {
+    @include circle(#{$size/1.5});
+    clip: rect(0, $size/1.5, #{$size/1.5/2}, 0);
+     background: #fff;
+     text-align: center;
+     display: table;
+    span {
+      margin-top: 30px;
+      display: block;
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #424242;
+    }
+    div {
+      display: table-cell;
+      vertical-align: baseline;
+    }
+  }
+
+  //  Breakpoints
+
+  @include breakpoint($screen-xs) {
+
+    @include span(6);
+
+    &:nth-of-type(2n + 1) {
+      @include break;
+    }
+
+  }
+
+  @include breakpoint($screen-sm) {
+
       @include span(3);
 
-      &:nth-of-type(3) {
+      &:nth-of-type(2n + 1) {
         @include nobreak;
       }
-    }
 
   }
 }

@@ -745,7 +745,7 @@ body {
     margin-left: 0.83333%;
     margin-right: 0.83333%;
   }
-  .services__item:nth-of-type(3) {
+  .services__item:nth-of-type(2n + 1) {
     clear: both;
   }
 }
@@ -756,7 +756,7 @@ body {
     margin-left: 0.83333%;
     margin-right: 0.83333%;
   }
-  .services__item:nth-of-type(3) {
+  .services__item:nth-of-type(2n + 1) {
     clear: none;
   }
 }
@@ -966,6 +966,7 @@ body {
   float: left;
   margin-left: 0.83333%;
   margin-right: 0.83333%;
+  margin-bottom: 1.5rem;
   text-align: center;
 }
 .team__item h3 {
@@ -988,12 +989,6 @@ body {
   display: block;
   width: 100%;
 }
-.team__chart {
-  width: 98.33333%;
-  float: left;
-  margin-left: 0.83333%;
-  margin-right: 0.83333%;
-}
 @media (min-width: 480px) {
   .team__item {
     width: 48.33333%;
@@ -1001,16 +996,7 @@ body {
     margin-left: 0.83333%;
     margin-right: 0.83333%;
   }
-  .team__item:nth-of-type(3) {
-    clear: both;
-  }
-  .team__chart {
-    width: 48.33333%;
-    float: left;
-    margin-left: 0.83333%;
-    margin-right: 0.83333%;
-  }
-  .team__chart:nth-of-type(3) {
+  .team__item:nth-of-type(2n + 1) {
     clear: both;
   }
 }
@@ -1021,16 +1007,108 @@ body {
     margin-left: 0.83333%;
     margin-right: 0.83333%;
   }
-  .team__item:nth-of-type(3) {
+  .team__item:nth-of-type(2n + 1) {
     clear: none;
   }
-  .team__chart {
+}
+
+.chart {
+  width: 98.33333%;
+  float: left;
+  margin-left: 0.83333%;
+  margin-right: 0.83333%;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  text-transform: uppercase;
+  color: #424242;
+  padding-top: -webkit-calc(100px + 1.5rem);
+  padding-top: calc(100px + 1.5rem);
+  position: relative;
+}
+.chart__item {
+  margin-bottom: 1.5rem;
+  margin: 0 auto;
+  width: 200px;
+  height: 200px;
+  overflow: hidden;
+  border-radius: 100px 100px 0 0;
+  background-color: #E5E5E5;
+  position: absolute;
+  clip: rect(0, 200px, 100px, 0);
+  top: 0;
+  left: -webkit-calc(50% - 100px);
+  left: calc(50% - 100px);
+}
+.chart__progress {
+  position: absolute;
+  border-radius: 50%;
+  left: -webkit-calc(50% - 100px);
+  left: calc(50% - 100px);
+  top: -webkit-calc(50% - 100px);
+  top: calc(50% - 100px);
+  width: 200px;
+  height: 200px;
+  clip: rect(0, 200px, 100px, 0);
+}
+.chart__fill {
+  position: absolute;
+  border-radius: 50%;
+  left: -webkit-calc(50% - 100px);
+  left: calc(50% - 100px);
+  top: -webkit-calc(50% - 100px);
+  top: calc(50% - 100px);
+  width: 200px;
+  height: 200px;
+  -webkit-transition: all 2s ease-in;
+  transition: all 2s ease-in;
+  clip: rect(100px, 200px, 200px, 0);
+  background: -webkit-linear-gradient(left, #52c73b, #00c085);
+  background: linear-gradient(to right, #52c73b, #00c085);
+}
+.chart__percents {
+  position: absolute;
+  border-radius: 50%;
+  left: -webkit-calc(50% - 133.33333px/2);
+  left: calc(50% - 133.33333px/2);
+  top: -webkit-calc(50% - 133.33333px/2);
+  top: calc(50% - 133.33333px/2);
+  width: 133.33333px;
+  height: 133.33333px;
+  clip: rect(0, 133.33333px, 66.66667px, 0);
+  background: #fff;
+  text-align: center;
+  display: table;
+}
+.chart__percents span {
+  margin-top: 30px;
+  display: block;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #424242;
+}
+.chart__percents div {
+  display: table-cell;
+  vertical-align: baseline;
+}
+@media (min-width: 480px) {
+  .chart {
+    width: 48.33333%;
+    float: left;
+    margin-left: 0.83333%;
+    margin-right: 0.83333%;
+  }
+  .chart:nth-of-type(2n + 1) {
+    clear: both;
+  }
+}
+@media (min-width: 768px) {
+  .chart {
     width: 23.33333%;
     float: left;
     margin-left: 0.83333%;
     margin-right: 0.83333%;
   }
-  .team__chart:nth-of-type(3) {
+  .chart:nth-of-type(2n + 1) {
     clear: none;
   }
 }

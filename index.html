@@ -5,7 +5,7 @@
   <meta name=viewport content="width=device-width, initial-scale=1, maximum-scale=1">
   <title>Parallels - One-page Responsive</title>
   <link rel="stylesheet" href="css/style.min.css">
-  <link rel="stylesheet" href="vendor/animate.css/animate.min.css">
+  <!-- <link rel="stylesheet" href="vendor/animate.css/animate.min.css"> -->
   <link href='http://fonts.googleapis.com/css?family=Roboto:400,300,500,700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
 </head>
 <body>
@@ -349,7 +349,7 @@
     </div>
   </section>
 
-  <section class="article" id="about">
+  <section class="article animation-wrapper" id="about">
     <div class="container">
       <h2 class="article__title">О нас</h2>
       <div class="team">
@@ -380,10 +380,56 @@
       </div>
 
       <h3 class="article__subtitle"><span>Наши скиллы</span></h3>
-      <div class="team__chart" data-percent="35">35%</div>
-      <div class="team__chart" data-percent="85">85%</div>
-      <div class="team__chart" data-percent="95">95%</div>
-      <div class="team__chart" data-percent="45">45%</div>
+      <div class="chart-wrapper">
+      <div class="chart" data-percent="35">
+        <div class="chart__item">
+          <div class="chart__progress">
+            <div class="chart__fill"></div>
+          </div>
+          <div class="chart__percents">
+            <div><span>%</span></div>
+          </div>
+        </div>
+        Интерфейсы
+      </div>
+
+      <div class="chart" data-percent="75">
+        <div class="chart__item">
+          <div class="chart__progress">
+            <div class="chart__fill"></div>
+          </div>
+          <div class="chart__percents">
+            <div><span>%</span></div>
+          </div>
+        </div>
+        Веб Дизайн
+      </div>
+
+      <div class="chart" data-percent="60">
+        <div class="chart__item">
+          <div class="chart__progress">
+            <div class="chart__fill"></div>
+          </div>
+          <div class="chart__percents">
+            <div><span>%</span></div>
+          </div>
+        </div>
+        Прототипы
+      </div>
+
+      <div class="chart" data-percent="95">
+        <div class="chart__item">
+          <div class="chart__progress">
+            <div class="chart__fill"></div>
+          </div>
+          <div class="chart__percents">
+            <div><span>%</span></div>
+          </div>
+        </div>
+        Фотография
+      </div>
+      </div>
+
     </div>
   </section>
 
