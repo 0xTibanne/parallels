@@ -119,7 +119,7 @@ body {
     background-image: url(/images/headline.jpg);
   }
   &_about {
-    background-image: url(/images/headline.jpg);
+    background-image: url(/images/headline-3.jpg);
   }
   &_social {
     background-image: url(/images/headline.jpg);
@@ -151,6 +151,10 @@ body {
 // About Us
 
 @import 'team';
+
+// Skills
+
+@import 'chart';
 
 // Contacts
 

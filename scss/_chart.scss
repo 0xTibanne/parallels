@@ -1,0 +1,85 @@
+$size: 200px;
+$bar-width: 30px;
+$bar-color: linear-gradient(to right,  #52C73B, #00C085);
+$track-color: #E5E5E5;
+
+.chart {
+  @include span(12);
+  @include margin-trailer(2);
+  text-align: center;
+  position: relative;
+
+  &__name {
+    @extend %medium;
+    text-transform: uppercase;
+    color: #424242;
+  }
+
+  &__item {
+    @include margin-trailer;
+    width: $size;
+    height: $size/2;
+    overflow: hidden;
+    border-radius: $size $size 0 0;
+    background: $track-color;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  &__fill {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -#{$size/2};
+    width: $size;
+    height: $size/2;
+    border-radius: 0 0 $size $size;
+    transition: all 2s ease-in;
+    transform-origin: 50% 0;
+    background: $bar-color;
+  }
+
+  &__percents {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    margin-left: -#{($size - 2*$bar-width)/2};
+    width: #{$size - 2*$bar-width};
+    height: #{($size - 2*$bar-width)/2};
+    border-radius: #{$size - 2*$bar-width} #{$size - 2*$bar-width} 0 0;
+    background: $background-primary;
+    text-align: center;
+    display: table;
+    span {
+      display: block;
+      font-size: 1.5rem;
+      @extend %medium;
+      color: #424242;
+      display: table-cell;
+      vertical-align: bottom;
+    }
+  }
+
+  //  Breakpoints
+
+  @include breakpoint($screen-xs) {
+
+    @include span(6);
+
+    &:nth-of-type(2n + 1) {
+      @include break;
+    }
+
+  }
+
+  @include breakpoint($screen-md) {
+
+      @include span(3);
+
+      &:nth-of-type(2n + 1) {
+        @include nobreak;
+      }
+
+  }
+}

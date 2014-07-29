@@ -157,17 +157,6 @@ $(function() {
         filter: selector
       });
 
-      // container.isotope( 'on', 'layoutComplete', function( isoInstance, laidOutItems ) {
-      //   var $thumb = $('.portfolio__thumbnail');
-      //   if (laidOutItems.length % 2 !==0 ) {
-      //     console.log('single add ' + laidOutItems.length);
-      //     $thumb.filter(':last').addClass('single');
-      //   } else if ($thumb.filter(':visible').length % 2 == 0) {
-      //     $('.single').removeClass('single');
-      //     console.log('single remove ' + laidOutItems.length);
-      //   }
-      // } );
-
       if (!$(this).hasClass('selected') ) {
         $(this).parents('#filter').find('.selected').removeClass('selected');
         $(this).addClass('selected');
@@ -177,20 +166,7 @@ $(function() {
     });
   }
 
-  // Price tables
-
-  // function setEqualHeight(columns) {
-  //   var tallestcolumn = 0;
-  //   columns.each(function() {
-  //     currentHeight = $(this).height();
-  //     if(currentHeight > tallestcolumn) {
-  //       tallestcolumn  = currentHeight;
-  //     }
-  //   });
-  //   columns.height(tallestcolumn);
-  // }
-  // $(window).resize( setEqualHeight($(".pricing__details")) );
-  // $(window).load( setEqualHeight($(".pricing__details")) );
+  // Charts
 
   $('.chart-wrapper').waypoint(function() {
 

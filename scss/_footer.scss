@@ -1,5 +1,6 @@
 .footer {
   height: $footer-height;
+  text-align: center;
   background-color: $background-secondary;
 
   .copyright {
@@ -7,8 +8,8 @@
     text-decoration: none;
     color: $footer-color;
     transition: all .4s ease-in-out;
-    float: right;
-    margin-right: gutter();
+    // float: right;
+    // margin-right: gutter();
 
     &:hover {
       color: $link-hover;
